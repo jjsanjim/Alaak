@@ -39,7 +39,9 @@ function Box(){
                         <Text style={styles.textNames}> Jefe </Text>
                         <Medal/>
                     </View>
+                    <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
                     <Text>Ver Todos  </Text>
+                    </TouchableOpacity>
                 </View>
                 <TouchableOpacity /*onPress={()=>navigation.navigate("SignUp")}*/>
                         <View style={styles.persons}>
