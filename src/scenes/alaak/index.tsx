@@ -21,7 +21,7 @@ function AlaakScene(){
                 <View style={styles.main}>
                     <Credential/>
                     <View style={styles.buttonBox}>
-                    <TouchableOpacity style={{alignItems:"center"}} /*onPress={()=>navigation.navigate("SignUp")}*/>
+                    <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Home")}>
                         <View style={styles.items}>
                             <CardSend/>
                         </View>
