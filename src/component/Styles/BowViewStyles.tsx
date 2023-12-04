@@ -191,7 +191,46 @@ container: {flex:1},
        justifyContent:"center",
        alignItems:"center"
   
-   }
+   },
+   textFiltwoF:{
+    fontSize:13,
+    color:"black",
+    margin:2,
+},
+textFilThreeF:{
+    color: "white",
+    fontWeight: "bold",
+    fontSize:13,
+    margin:7,
+},
+buttonShapeTwoF:{
+
+
+    width:90,
+    height:33,
+    borderRadius:100,
+    borderColor:"white",
+    borderWidth:1,
+    backgroundColor: "white",
+    marginLeft:20,
+    justifyContent:"center",
+    alignItems:"center"
+},
+buttonShapeThreeF:{
+
+
+    width:74,
+    height:33,
+    borderRadius:100,
+    borderColor:"#CDA100",
+    borderWidth:1,
+    backgroundColor: "#CDA100",
+    marginLeft:10,
+    justifyContent:"center",
+    alignItems:"center"
+
+}
+
 });
 
 

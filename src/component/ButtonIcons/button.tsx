@@ -10,7 +10,7 @@ const ButtonIcon =()=> {
            marginStart:280,
            marginBottom:7,
            width:94,
-           height:17,
+           height:30,
            flexDirection:'row',
            backgroundColor:'#fff',
            borderRadius:20,

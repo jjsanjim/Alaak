@@ -1,11 +1,13 @@
 import React from "react";
 import { TouchableOpacity, View, Text} from "react-native";
 import Sig from "../Icons/Siguiente";
+import { useNavigation } from "@react-navigation/native";
 
 
 const Tds=()=> {
+    const navigation=useNavigation()
    return (
-       <TouchableOpacity>
+       <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
            <View style={{
               
                marginLeft:250,

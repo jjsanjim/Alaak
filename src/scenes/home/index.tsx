@@ -48,19 +48,22 @@ function AlaakHome (){
                <Text style={{color:'#FFFFFF',
                    justifyContent:'center',
                    alignItems:'center',
-                   fontSize:25,
-                   marginTop:70}}> Hola Luis </Text>
+                   fontSize:17.71,
+                   fontWeight:"700",
+                   marginTop:50}}> Hola Luis </Text>
                   
                </View>
                <View style={{ justifyContent:'center',
                    alignItems:'center',
                    marginTop:70,
-                   marginStart:90}}>
+                   marginBottom:20,
+                   marginStart:140}}>
                        <Not/>
                </View>
                <View style={{justifyContent:'center',
                    alignItems:'center',
-                   marginTop:70,}}>
+                   marginTop:70,
+                   marginBottom:20}}>
                        <Conf/>
                </View>
            </View>
@@ -72,7 +75,7 @@ function AlaakHome (){
                alignItems:'center'}}>
                   <ButtonIcon/>
                    <Card>
-                       <View style={{flexDirection:'row'}}>
+                       <View style={{flexDirection:'row', justifyContent:"space-evenly"}}>
                            <TouchableOpacity style={{alignItems:"center"}}>
                                <View style={{
                                    width:51,
@@ -178,13 +181,13 @@ function AlaakHome (){
                            </View>
                            </TouchableOpacity>   
                        </View>
-                       <View>
+                       <View style={{alignSelf:"flex-end"}}>
                            <Tds/>
                        </View>
                    </Card>
                    <Card>
                        <Text style={{fontSize:18,color:'#333'}}>Departamentos</Text>
-                       <View style={{flexDirection:'row', alignItems:"center", justifyContent:"center"}}>
+                       <View style={{flexDirection:'row', alignItems:"center", justifyContent:"space-evenly"}}>
                       
                            <TouchableOpacity style={{alignItems:'center'}}>
                                <View
@@ -257,7 +260,7 @@ function AlaakHome (){
                            </TouchableOpacity>
                           
                        </View>
-                           <View>
+                           <View style={{alignSelf:"flex-end", paddingTop:10}}>
                                <Tds/>
                            </View>
                    </Card>
