@@ -17,7 +17,7 @@ function AlaakHome (){
     const navigation=useNavigation()
     return(
        <SafeAreaView style={{flex:1,
-       backgroundColor:'#333333'}}>
+       backgroundColor:'#333'}}>
            <View style={{
                zIndex:999,
                flexDirection:'row',
@@ -38,7 +38,7 @@ function AlaakHome (){
                    padding:10
                }}>
                   
-                   <Image source={{uri:'https://s3-alpha-sig.figma.com/img/37c1/0237/520e0a663ec752c7b412bc9635ae2449?Expires=1702252800&Signature=po3BiKXe7W~pU5c9mVBaHPvmhzRoGDPh6e-lFx5OwYVYroNfOqs5GrKeDXG9g3WSqnKFfYSYCzfBwMzOs8qSaCmXJQ1HqVYEgQILNRAOXNr4-OK68VikEbBWmvPydwHJpb-VCIMGBLZmKw93-F7Ca4OnDUqZdP7ylSvgM8O1ANIdtmmog-Df6yiCu2T0P37CulP5ywWLlq9sfLxEwVAs3TPH30MF2NZGDOZ-7zAvgEPByJ-5e7Ne3O7hHeN12lvihfoYJJ7qmInaTBTnrFS1uzUwGY4l4cQyNHMXEyGM8yzyEtcQ3w90rW-LWo3jFpvU3uV~~rWsN2iK5R8s5Hn02Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'}}
+                   <Image source={require("../../component/Images/Rectangle5.png")}
                    style={{width: '100%', height: '100%', borderRadius:100}}/> 
                </View>
 
@@ -57,7 +57,8 @@ function AlaakHome (){
                    alignItems:'center',
                    marginTop:70,
                    marginBottom:20,
-                   marginStart:140}}>
+                   marginStart:140,
+                   marginRight:5}}>
                        <Not/>
                </View>
                <View style={{justifyContent:'center',
@@ -70,13 +71,17 @@ function AlaakHome (){
 
 
            <View style={{flex:21,
-               backgroundColor:'#000000',
+               backgroundColor:'#333',
                justifyContent:'center',
                alignItems:'center'}}>
-                  <ButtonIcon/>
+                  <View style={{padding:15}}>
+                    <ButtonIcon/>
+                  </View>
+                  
                    <Card>
                        <View style={{flexDirection:'row', justifyContent:"space-evenly"}}>
-                           <TouchableOpacity style={{alignItems:"center"}}>
+                           <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Organization")}>
+                              
                                <View style={{
                                    width:51,
                                    height:51,
@@ -87,8 +92,9 @@ function AlaakHome (){
                                    }}>
                                    <Org/>
                                </View>
-                               <Text style={{marginLeft:15,
+                               <Text style={{
                                color:'#000000',fontSize:13}}>Organigrama</Text>
+                               
                            </TouchableOpacity>
                            <TouchableOpacity style={{alignItems:"center"}}>
                                <View style={{
@@ -120,7 +126,7 @@ function AlaakHome (){
                                    <Tra/>
                                </View>
                                <Text style={{marginLeft:15,
-                               color:'#000000',fontSize:13}}>Transferencias</Text>
+                               color:'#000000',fontSize:13}}>Transferir</Text>
                            </TouchableOpacity>
                            <TouchableOpacity style={{alignItems:"center"}}>
                                <View style={{

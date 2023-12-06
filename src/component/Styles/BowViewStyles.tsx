@@ -71,14 +71,14 @@ container: {flex:1},
    header:{
        //flex:1,
        backgroundColor:"#F5F7F8",
-       justifyContent:"center",
-       alignItems: "center",
+       justifyContent:"flex-end",
+       alignItems: "stretch",
        flexDirection: "column",
        height: 96,
        //width: 428,
        borderRadius:16,
-       //marginTop: 15,
-       paddingHorizontal:40
+       padding:16,
+       //paddingHorizontal:10
     
       
    },
@@ -86,7 +86,7 @@ container: {flex:1},
        fontSize:18,
        color:"black",
        fontWeight:"bold",
-       margin:15
+       //margin:15
    },
    texthree:{
        fontSize:18,

@@ -19,13 +19,13 @@ function OrganScene(){
        
            <SafeAreaView style={styles.container}>
            <View style={styles.header}>
-               <View style={{alignItems:"center", flexDirection:"row"}}><ArrowIcon/>
-
-
-                       <View style={styles.header}>
-                           <Text style={styles.textone}> Perfil Empresarial </Text>
-                          
-                       </View><NotificationIcon/><SettingIcon/>
+               <View style={{alignItems:"flex-end", flexDirection:"row", justifyContent:"space-between"}}>
+                    <ArrowIcon/>
+                    <Text style={styles.textone}> Perfil Empresarial </Text>
+                    <View style={{flexDirection:"row"}}>
+                        <NotificationIcon/>
+                        <SettingIcon/>
+                    </View>
                </View>
            </View>
 

@@ -7,8 +7,8 @@ function Card(props) {
        <View
         style={{
            padding:16,
-           width: '100%',
-           minHeight:120,
+           width: 396,
+           minHeight:131,
            borderRadius: 15,
            marginBottom:10,
            backgroundColor:"white",
@@ -17,6 +17,8 @@ function Card(props) {
            shadowOpacity:0.58,
            shadowRadius:16.00,
            elevation:24,
+           justifyContent:"center",
+           
            
            }}>
                {props.children}

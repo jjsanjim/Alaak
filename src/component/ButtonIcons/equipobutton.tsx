@@ -9,7 +9,7 @@ const  Eqp=()=>{
                marginEnd:30,
                width:120,
                height:37,
-               backgroundColor:'#000000',
+               backgroundColor:'#333',
                borderRadius:70,
                justifyContent:'center',
                alignItems:'center',
