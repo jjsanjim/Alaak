@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useMemo} from "react";
 import { SafeAreaView, View, Text, Image, StyleSheet, ScrollView, Button, Alert, TouchableOpacity} from "react-native";
 import Input from "../../component/AleBoxView/input";
 import Box from "../../component/AleBoxView/2ndscreen";
@@ -9,12 +9,17 @@ import SearchIcon from "../../component/Icons/SearchIcon";
 import ArrowIcon from "../../component/Icons/ArrowIcon";
 import SettingIcon from "../../component/Icons/SettingIcon";
 import { useNavigation } from "@react-navigation/native";
+import BottomSheet, {BottomSheetBackdrop} from "@gorhom/bottom-sheet";
+import FilterSheet from "../../component/BottomSheets";
 
 
 
 
 function OrgantScene(){
    const navigation = useNavigation()
+   const bottomSheetRef = useRef<BottomSheet>(null);
+  // variables
+  const snapPoints = useMemo(() => ['60%', '60%'], []);
    return (
        
            <SafeAreaView style={styles.container}>
@@ -28,20 +33,27 @@ function OrgantScene(){
                     </View>
                </View>
            </View>
-
-
            <View style={styles.buttonSearch}>
-              
-               <Input
-                   placeholder="Buscar en Mi empresa"
-                   placeholderTextColor={"black"}
-                   style={styles.inputStyle}/>
-
-
+                <View style={{
+                    flexDirection:"row",
+                    backgroundColor: "#fff",
+                    borderRadius:100,
+                    height:56,
+                    borderWidth:0.5,
+                    borderColor:"#E8E8E9",
+                    paddingHorizontal:24,
+                    alignItems:"center"
+                }}>
+                    <SearchIcon/>
+                    <Input style={{marginLeft:12}}
+                    placeholderTextColor={"#333"}
+                    placeholder="Buscar en Mi empresa"/>
+                </View>
+               
            </View>
            <View style={styles.filter}>
                <View style={styles.buttonShape}><Text style={styles.textFiltwo}>Filtros</Text></View>   
-               <View style={styles.buttonShapeFour}><FilterIcon/></View>
+               <TouchableOpacity onPress={()=>bottomSheetRef.current.expand(BottomSheet)} style={styles.buttonShapeFour}><FilterIcon/></TouchableOpacity>
                <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
                 <View style={styles.buttonShapeTwoF}><Text style={styles.textFiltwoF}>Mi equipo</Text></View>
                </TouchableOpacity>
@@ -66,6 +78,30 @@ function OrgantScene(){
 
 
            </View>
+
+           <BottomSheet
+            ref={bottomSheetRef}
+            index={-1}
+            snapPoints={snapPoints}
+            enableOverDrag
+            enablePanDownToClose={true}
+            backgroundStyle={{backgroundColor:"#fff"}}
+            backdropComponent={(props) => (
+                <BottomSheetBackdrop
+                {...props}
+                opacity={0.5}
+                enableTouchThrough={false}
+                appearsOnIndex={0}
+                disappearsOnIndex={-1}
+                style={[{backgroundColor:'rgba(0, 0, 0, 1)'}, StyleSheet.absoluteFillObject]}
+                />
+            )}
+        >
+            <ScrollView>
+                <FilterSheet/>
+            </ScrollView>
+            </BottomSheet>
+            
        </SafeAreaView>
 
 

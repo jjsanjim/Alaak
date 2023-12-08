@@ -116,13 +116,11 @@ container: {flex:1},
        alignItems: "center",
    },
    buttonSearch:{
-       flex:1.5,
+       flex:1,
        height: 56,
-       width: 420,
        backgroundColor: "#333",
        borderRadius:0.5,
-       alignItems: "center",
-       padding:0.5
+       padding:16
    },
    inputStyle:{
        borderWidth: 0.5,
