@@ -101,9 +101,9 @@ function OrganScene(){
                 />
             )}
         >
-            <View style={{flex:1, padding:24}}>
+            <ScrollView>
                 <FilterSheet/>
-            </View>
+            </ScrollView>
             </BottomSheet>
             
         </SafeAreaView>

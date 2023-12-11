@@ -57,6 +57,33 @@ const styles= StyleSheet.create({
         borderColor:"#E8E8E9",
         paddingHorizontal:24,
         alignItems:"center"
+    },
+    departments:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        padding:24
+    },
+    setFilter:{
+        borderRadius:50,
+        borderWidth:1,
+        width:194,
+        height:56,
+        paddingHorizontal:24,
+        paddingVertical:14,
+        justifyContent:"center",
+        alignItems:"center",
+        borderColor:"#CDA100"
+    },
+    bottomFilter:{
+        width:"100%",
+        minHeight:79,
+        padding:24,
+        backgroundColor:"#FFF",
+        flexDirection:"row",
+        justifyContent:"space-between",
+
+
     }
 });
 export default styles;
