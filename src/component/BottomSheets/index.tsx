@@ -15,7 +15,7 @@ function FilterSheet(){
             </View>
             <View style={styles.main}>
                 <View style={styles.completeFilter}>
-                    <Text style={styles.textOne}>Filtrar por:</Text>
+                    <Text style={styles.textOne}>Filtrar poooooooooooooooor:</Text>
                     <View style={styles.cleanFilter}>
                         <Text style={styles.textClean}>Limpiar filtro</Text>
                     </View>
