@@ -83,7 +83,8 @@ const styles =StyleSheet.create({
         elevation: 15,
         position:"absolute",
         bottom:0,
-        left:25
+        left:25,
+        right:25
     },
     credName:{
         color:"#1D1D1B",
