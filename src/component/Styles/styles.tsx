@@ -2,12 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles =StyleSheet.create({
     squareShape:{
-        height: 278,
+        minHeight: 278,
         width: 396,
         backgroundColor: "#FFFF",
         borderRadius:16,
         marginTop: 15,
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         padding:16,
         elevation:15,
     },
