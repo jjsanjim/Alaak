@@ -39,7 +39,7 @@ function Box(){
                     </View>
                 </View>
                 <TouchableOpacity style={{alignItems:"flex-end"}}onPress={()=>bottomSheetRef.current?.expand(BottomSheet)}>
-                    <Text>Ver Todo  </Text>
+                    <Text>ver todo  </Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.squareShape}>
@@ -49,7 +49,7 @@ function Box(){
                         <Medal/>
                     </View>
                     <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
-                    <Text>Ver Todos  </Text>
+                    <Text>ver todos  </Text>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity /*onPress={()=>navigation.navigate("SignUp")}*/>
