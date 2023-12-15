@@ -6,19 +6,49 @@ const styles= StyleSheet.create({
     },
     header:{
         flex:1,
-        justifyContent:"center",
-        alignItems:"center"
+        height: 60,
+        //width: 428,
+        padding:16,
+        flexDirection: "column",
+        justifyContent:"flex-end",
+        alignItems: "flex-start",
+        backgroundColor:"white",
+        borderRadius:16,
+        paddingHorizontal:10
+     
     },
     main:{
         flex:11,
         backgroundColor:"#F5F7F8"
     },
-    textOne:{
-        fontFamily:"poppins",
-        fontSize:16,
-        fontStyle:"normal",
-        fontWeight:"700",
+    text:{
 
+    color:"#333",
+    textAlign: "center",
+    fontFamily: "Poppins",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: "700",
+    height: 24,
+    width: 300,
+    },
+    textOne:{
+
+        color:"#333",
+        textAlign: "center",
+        fontFamily: "Poppins",
+        fontSize: 16,
+        fontStyle: "normal",
+        fontWeight: "700",
+        height: 24,
+        width:86 ,
+        },
+    textTwo:{
+        fontFamily:"Inter",
+        fontSize:14,
+        fontStyle:"normal",
+        fontWeight:"500",
+        color:"#333333",  
     },
     cleanFilter:{
         borderRadius:50,
@@ -31,11 +61,24 @@ const styles= StyleSheet.create({
         borderColor:"#CDA100"
     },
     textClean:{
+
         color:"#CDA100",
         fontSize:14,
-        fontFamily:"poppins",
+        fontFamily:"Poppins",
         fontStyle:"normal",
-        fontWeight:"500"
+        fontWeight:"500",
+        //textAlign: "center"
+        //height: 21,
+        //width:104 ,
+    },
+    textCleanTwo:{
+        color:"white",
+        fontSize:14,
+        fontFamily:"Poppins",
+        fontStyle:"normal",
+        fontWeight:"bold",
+       textAlign: "center"
+
     },
     completeFilter:{
         width:"100%",
@@ -45,8 +88,6 @@ const styles= StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         marginTop:15
-
-
     },
     search:{
         flexDirection:"row",
@@ -65,15 +106,27 @@ const styles= StyleSheet.create({
         padding:24
     },
     setFilter:{
-        borderRadius:50,
+        borderRadius:100,
         borderWidth:1,
-        width:194,
+        width:164,
         height:56,
         paddingHorizontal:24,
         paddingVertical:14,
         justifyContent:"center",
         alignItems:"center",
         borderColor:"#CDA100"
+    },
+    setFilterTwo:{
+        borderRadius:100,
+        borderWidth:1,
+        width:164,
+        height:56,
+        paddingHorizontal:24,
+        paddingVertical:14,
+        justifyContent:"center",
+        alignItems:"center",
+        borderColor:"#CDA100",
+        backgroundColor:"#CDA100"
     },
     bottomFilter:{
         width:"100%",
@@ -82,8 +135,6 @@ const styles= StyleSheet.create({
         backgroundColor:"#FFF",
         flexDirection:"row",
         justifyContent:"space-between",
-
-
     }
 });
 export default styles;
