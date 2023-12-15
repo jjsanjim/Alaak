@@ -57,11 +57,11 @@ function Box(){
     ]
     return(
        <SafeAreaView>
-    
-        
+ 
     {        
-        //.map me genera un clone del arreglo y lo podemos modificar
+       //map me genera un clone del arreglo y lo podemos modificar
         //array.map( (item,index,array,arrayOriginal)=>)
+        //[]    //{}
         team.map((item,index)=>{
             return(
 
