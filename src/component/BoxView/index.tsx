@@ -12,8 +12,35 @@ import RhSheet from "../BottomSheets/rhbottomsh";
 function Box(){ 
     const navigation=useNavigation();
     const bottomSheetRef = useRef<BottomSheet>(null);
-  // variables
-  const snapPoints = useMemo(() => ['25%', '100%'], []);   
+
+  const snapPoints = useMemo(() => ['25%', '100%'], []);
+  const designTeam = [
+
+{
+    avatar:require("../Images/Avatar-base(3).png"),
+    firstName:"César",
+    lastName:"Ramón",
+    area:"Trainne UX&UI "
+},
+{
+    avatar:require("../Images/Avatar-base(2).png"),
+    firstName:"Aline",
+    lastName:"Palacios",
+    area:"Trainne UX&UI "
+},
+{
+    avatar:require("../Images/Avatar-base(1).png"),
+    firstName:"Nathali",
+    lastName:"Ortiz",
+    area:"Trainne UX&UI "
+},
+{
+    avatar:require("../Images//Avatar-base.png"),
+    firstName:"Vanessa",
+    lastName:"Luna",
+    area:"Trainne UX&UI "
+}
+]   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>
@@ -34,7 +61,7 @@ function Box(){
                         </View>
                         <View style={styles.textShape}>
                             <Text style={styles.textBox}> Cumpleaños</Text>
-                            <Text style={styles.textBox}> 12 de Noviembre</Text>                        
+                            <Text style={styles.textBox}> 02 de Febrero</Text>                        
                         </View>
                     </View>
                 </View>
@@ -63,26 +90,15 @@ function Box(){
                 
                 <Text style={styles.textNames}> Equipo de Humberto </Text>
                     <View style={{flexDirection:"row", justifyContent:"space-between"}}>
-                        <View style={styles.persons}>
-                            <Image style={styles.fotoBox} source={require("../Images/Avatar-base.png")}/>
-                            <Text style={styles.personsName}>Vanessa</Text>
-                            <Text style={styles.personsName}>Luna</Text>
-                        </View>
-                        <View style={styles.persons}>
-                            <Image style={styles.fotoBox} source={require("../Images/Avatar-base(1).png")}/>
-                            <Text style={styles.personsName}>Aline</Text>
-                            <Text style={styles.personsName}>Palacios</Text>
-                        </View>
-                        <View style={styles.persons}>
-                            <Image style={styles.fotoBox} source={require("../Images/Avatar-base(3).png")}/>
-                            <Text style={styles.personsName}>Nathali</Text>
-                            <Text style={styles.personsName}>Ortíz</Text>
-                        </View>
-                        <View style={styles.persons}>
-                            <Image style={styles.fotoBox} source={require("../Images/Avatar-base(2).png")}/>
-                            <Text style={styles.personsName}>Cesar</Text>
-                            <Text style={styles.personsName}>Ramos</Text>
-                        </View>
+                        {designTeam.map((item,index)=>{
+                            return(
+                                <View style={styles.persons}>
+                                    <Image style={styles.fotoBox} source={item.avatar}/>
+                                    <Text style={styles.personsName}>{item.firstName}</Text>
+                                    <Text style={styles.personsName}>{item.lastName}</Text>
+                                </View>
+                            )
+                        })}
                     </View>    
                         
             </View>
