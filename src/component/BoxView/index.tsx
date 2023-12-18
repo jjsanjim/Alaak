@@ -12,7 +12,6 @@ import RhSheet from "../BottomSheets/rhbottomsh";
 function Box(){ 
     const navigation=useNavigation();
     const bottomSheetRef = useRef<BottomSheet>(null);
-
   const snapPoints = useMemo(() => ['25%', '100%'], []);
   const designTeam = [
 
@@ -40,7 +39,9 @@ function Box(){
     lastName:"Luna",
     area:"Trainne UX&UI "
 }
-]   
+]  
+  // variables
+  const snapPoints = useMemo(() => ['25%', '100%'], []);   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>
