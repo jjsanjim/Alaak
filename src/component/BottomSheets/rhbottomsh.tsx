@@ -34,7 +34,7 @@ function RhSheet(){
                     </View>
                     <View style={styles.littleSquare}>
                         <View style={styles.icons}>
-                            <Calendar/>
+                            <Documents/>
                         </View>
                         <View style={styles.textShape}>
                             <Text style={styles.textBox}> CURP</Text>                    
@@ -43,7 +43,7 @@ function RhSheet(){
                     </View>
                     <View style={styles.littleSquare}>
                         <View style={styles.icons}>
-                            <Calendar/>
+                            <Documents/>
                         </View>
                         <View style={styles.textShape}>
                             <Text style={styles.textBox}> Dirección</Text>                    
@@ -52,7 +52,7 @@ function RhSheet(){
                     </View>
                     <View style={styles.littleSquare}>
                         <View style={styles.icons}>
-                            <Calendar/>
+                            <Documents/>
                         </View>
                         <View style={styles.textShape}>
                             <Text style={styles.textBox}> NSS</Text>                    
@@ -61,7 +61,7 @@ function RhSheet(){
                     </View>
                     <View style={styles.littleSquare}>
                         <View style={styles.icons}>
-                            <Calendar/>
+                            <Documents/>
                         </View>
                         <View style={styles.textShape}>
                             <Text style={styles.textBox}> CV</Text>                    
