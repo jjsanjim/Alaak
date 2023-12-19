@@ -40,8 +40,7 @@ function Box(){
     area:"Trainne UX&UI "
 }
 ]  
-  // variables
-  const snapPoints = useMemo(() => ['25%', '100%'], []);   
+   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>
