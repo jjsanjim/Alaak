@@ -122,7 +122,7 @@ const styles =StyleSheet.create({
         backgroundColor: "#FFFF",
         borderRadius:16,
         marginBottom:8,
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         padding:8,
         elevation:1,
         flexDirection:"row",
@@ -133,6 +133,13 @@ const styles =StyleSheet.create({
         color:"#1D1D1B",
         fontStyle:"normal",
         fontWeight: "700",
+        flexDirection:"column"
+    },
+    textBoxtwo:{
+        fontSize:13,
+        color:"#1D1D1B",
+        fontStyle:"normal",
+        fontWeight: "500",
         flexDirection:"column"
     },
     items:{
@@ -162,6 +169,15 @@ const styles =StyleSheet.create({
         backgroundColor:"#CDA100",
         justifyContent:"center",
         alignItems:"center"
+    },
+    iconsbs:{
+        width:51,
+        height:51,
+        borderRadius:100,
+        backgroundColor:"#333",
+        justifyContent:"center",
+        alignItems:"center"
+
     },
     email:{
         flexDirection:"row",

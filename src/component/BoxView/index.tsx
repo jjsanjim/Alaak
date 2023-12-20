@@ -16,19 +16,19 @@ function Box(){
   const designTeam = [
 
 {
-    avatar:require("../Images/Avatar-base(3).png"),
+    avatar:require("../Images/Avatar-base(2).png"),
     firstName:"César",
     lastName:"Ramón",
     area:"Trainne UX&UI "
 },
 {
-    avatar:require("../Images/Avatar-base(2).png"),
+    avatar:require("../Images/Avatar-base(1).png"),
     firstName:"Aline",
     lastName:"Palacios",
     area:"Trainne UX&UI "
 },
 {
-    avatar:require("../Images/Avatar-base(1).png"),
+    avatar:require("../Images/Avatar-base(3).png"),
     firstName:"Nathali",
     lastName:"Ortiz",
     area:"Trainne UX&UI "
@@ -40,29 +40,32 @@ function Box(){
     area:"Trainne UX&UI "
 }
 ]  
-  // variables
-  const snapPoints = useMemo(() => ['25%', '100%'], []);   
+   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>
                 <Text style={styles.textNames}>Información Personal </Text>
                 <View>
                     <View style={styles.littleSquare}>
-                        <View style={styles.icons}>
-                            <Calendar/>
-                        </View>
-                        <View style={styles.textShape}>
-                            <Text style={styles.textBox}> Fecha de Ingreso</Text>                    
-                            <Text style={styles.textBox}> 04 de Septiembre de 2023</Text>
+                        <View style={{flexDirection:"row"}}>
+                            <View style={styles.icons}>
+                                <Calendar/>
+                            </View>
+                            <View style={styles.textShape}>
+                                <Text style={styles.textBox}> Fecha de Ingreso</Text>                    
+                                <Text style={styles.textBoxtwo}> 04 de Septiembre de 2023</Text>
+                            </View>
                         </View>
                     </View>
                     <View style={styles.littleSquare}>
-                        <View style={styles.icons}>
-                            <Documents/>
-                        </View>
-                        <View style={styles.textShape}>
-                            <Text style={styles.textBox}> Cumpleaños</Text>
-                            <Text style={styles.textBox}> 02 de Febrero</Text>                        
+                        <View style={{flexDirection:"row"}}>
+                            <View style={styles.icons}>
+                                <Documents/>
+                            </View>
+                            <View style={styles.textShape}>
+                                <Text style={styles.textBox}> Cumpleaños</Text>
+                                <Text style={styles.textBoxtwo}> 02 de Febrero</Text>                        
+                            </View>
                         </View>
                     </View>
                 </View>
