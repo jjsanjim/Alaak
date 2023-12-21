@@ -26,19 +26,19 @@ const team = [
         area:"Trainne UX&UI "
     },
     {
-        avatar:require("../../component/Images/Avatar-base(3).png"),
+        avatar:require("../../component/Images/Avatar-base(2).png"),
         firstName:"César",
         lastName:"Ramón",
         area:"Trainne UX&UI "
     },
     {
-        avatar:require("../../component/Images/Avatar-base(2).png"),
+        avatar:require("../../component/Images/Avatar-base(1).png"),
         firstName:"Aline",
         lastName:"Palacios",
         area:"Trainne UX&UI "
     },
     {
-        avatar:require("../../component/Images/Avatar-base(1).png"),
+        avatar:require("../../component/Images/Avatar-base(3).png"),
         firstName:"Nathali",
         lastName:"Ortiz",
         area:"Trainne UX&UI "
@@ -48,13 +48,7 @@ const team = [
         firstName:"Vanessa",
         lastName:"Luna",
         area:"Trainne UX&UI "
-    },
-    {
-        avatar:require("../../component/Images//Avatar-base.png"),
-        firstName:"Vanessa",
-        lastName:"Luna",
-        area:"Trainne UX&UI "
-    },
+    }
 ]
 
 function OrganScene(){

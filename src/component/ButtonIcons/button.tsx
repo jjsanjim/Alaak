@@ -8,7 +8,7 @@ const ButtonIcon =()=> {
        <TouchableOpacity>
            <View style={{bottom:15}}>
            <View style={{
-           marginStart:280,
+           marginStart:245,
            //marginBottom:7,
            width:127,
            height:30,

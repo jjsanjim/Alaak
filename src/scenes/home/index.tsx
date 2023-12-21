@@ -22,51 +22,56 @@ function AlaakHome (){
                zIndex:999,
                flexDirection:'row',
                backgroundColor:'#CDA100',
+               justifyContent:'space-around',
+               paddingHorizontal:16,
                alignItems:'center'}}>
-           <View style={{position:'relative',width:124,height:90}}>
-               <View style={{
-                   top:30,
-                   position:'absolute',
-                   zIndex:999,
-                   width:100,
-                   height:100,
-                   backgroundColor:'#CDA100',
-                   overflow:'hidden',
-                   borderRadius:100,
-                   justifyContent:'center',
-                   alignItems:'center',
-                   padding:10
-               }}>
-                  
-                   <Image source={require("../../component/Images/Rectangle5.png")}
-                   style={{width: '100%', height: '100%', borderRadius:100}}/> 
-               </View>
+            <View style={{position:'relative',width:124,height:90}}>
+                <View style={{
+                    top:30,
+                    position:'absolute',
+                    zIndex:999,
+                    width:100,
+                    height:100,
+                    backgroundColor:'#CDA100',
+                    overflow:'hidden',
+                    borderRadius:100,
+                    justifyContent:'center',
+                    alignItems:'center',
+                    padding:10
+                }}>
+                    
+                    <Image source={require("../../component/Images/Rectangle5.png")}
+                    style={{width: '100%', height: '100%', borderRadius:100}}/> 
+                </View>
 
 
-           </View>   
-               <View >
-               <Text style={{color:'#FFFFFF',
-                   justifyContent:'center',
-                   alignItems:'center',
-                   fontSize:17.71,
-                   fontWeight:"700",
-                   marginTop:50}}> Hola Luis </Text>
-                  
-               </View>
-               <View style={{ justifyContent:'center',
-                   alignItems:'center',
-                   marginTop:70,
-                   marginBottom:20,
-                   marginStart:140,
-                   marginRight:5}}>
-                       <Not/>
-               </View>
-               <View style={{justifyContent:'center',
-                   alignItems:'center',
-                   marginTop:70,
-                   marginBottom:20}}>
-                       <Conf/>
-               </View>
+            </View>   
+                <View >
+                <Text style={{color:'#FFFFFF',
+                    justifyContent:'center',
+                    alignItems:'center',
+                    fontSize:17.71,
+                    fontWeight:"700",
+                    marginTop:50}}> Hola Luis </Text>
+                    
+                </View>
+                
+                    <View style={{ justifyContent:'center',
+                        alignItems:'center',
+                        marginTop:70,
+                        marginBottom:20,
+                        marginStart:140,
+                        marginRight:5}}>
+                        <Not/>
+                    </View>
+                    <View style={{justifyContent:'center',
+                        alignItems:'center',
+                        marginTop:70,
+                        marginBottom:20}}>
+                        <Conf/>
+                    </View> 
+                
+               
            </View>
 
 
@@ -74,7 +79,8 @@ function AlaakHome (){
                backgroundColor:'#333',
                justifyContent:'center',
                alignItems:'center'}}>
-                  <View style={{padding:15}}>
+                <ScrollView>
+                  <View style={{padding:20}}>
                     <ButtonIcon/>
                   </View>
                   
@@ -270,7 +276,7 @@ function AlaakHome (){
                                <Tds/>
                            </View>
                    </Card>
-                  
+                 </ScrollView> 
            </View>
           
 
