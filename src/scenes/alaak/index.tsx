@@ -13,7 +13,9 @@ import RhSheet from "../../component/BottomSheets/rhbottomsh";
 function AlaakScene(){
     const navigation= useNavigation()
     const bottomSheetRef = useRef<BottomSheet>(null);
-    const snapPoints = useMemo(() => ['25%', '100%'], []);
+    const SnapPoints = useMemo( ()=> ["25%", "75%"],[]);
+    /*const { animatedHandleHeight, animatedSnapPoints, animatedContentHeight, handleContentLayout } =
+    useBottomSheetDynamicSnapPoints(points); */
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
@@ -45,14 +47,17 @@ function AlaakScene(){
                     </View>
                     <View style={styles.outext}>
                     </View>
-                    <Box/>
+                    <Box onViewAll={()=>{
+                        bottomSheetRef.current?.expand()}}/>
                 </View>
             </ScrollView>
 
             <BottomSheet
             ref={bottomSheetRef}
             index={-1}
-            snapPoints={snapPoints}
+            snapPoints={SnapPoints}
+           /* handleHeight={animatedHandleHeight}
+            contentHeight={animatedContentHeight} */
             enableOverDrag
             enablePanDownToClose={true}
             backgroundStyle={{backgroundColor:"#fff"}}
