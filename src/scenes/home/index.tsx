@@ -55,20 +55,23 @@ function AlaakHome (){
                     marginTop:50}}> Hola Luis </Text>
                     
                 </View>
-                <View style={{ justifyContent:'center',
-                    alignItems:'center',
-                    marginTop:70,
-                    marginBottom:20,
-                    marginStart:140,
-                    marginRight:5}}>
+                
+                    <View style={{ justifyContent:'center',
+                        alignItems:'center',
+                        marginTop:70,
+                        marginBottom:20,
+                        marginStart:140,
+                        marginRight:5}}>
                         <Not/>
-                </View>
-                <View style={{justifyContent:'center',
-                    alignItems:'center',
-                    marginTop:70,
-                    marginBottom:20}}>
+                    </View>
+                    <View style={{justifyContent:'center',
+                        alignItems:'center',
+                        marginTop:70,
+                        marginBottom:20}}>
                         <Conf/>
-                </View>
+                    </View> 
+                
+               
            </View>
 
 
@@ -76,7 +79,8 @@ function AlaakHome (){
                backgroundColor:'#333',
                justifyContent:'center',
                alignItems:'center'}}>
-                  <View style={{padding:15}}>
+                <ScrollView>
+                  <View style={{padding:20}}>
                     <ButtonIcon/>
                   </View>
                   
@@ -272,7 +276,7 @@ function AlaakHome (){
                                <Tds/>
                            </View>
                    </Card>
-                  
+                 </ScrollView> 
            </View>
           
 
