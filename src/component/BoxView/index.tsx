@@ -41,7 +41,7 @@ function Box(){
 }
 ]  
   // variables
-  const snapPoints = useMemo(() => ['25%', '100%'], []);   
+   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>

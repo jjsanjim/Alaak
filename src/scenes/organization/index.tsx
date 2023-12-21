@@ -108,11 +108,9 @@ function OrganScene(){
               <View style={styles.buttonShapeTwo}><Text style={styles.textFiltwo}>Mi equipo</Text></View>
               <TouchableOpacity onPress={()=>navigation.navigate("AllOrg")}>
                <View style={styles.buttonShapeThree}><Text style={styles.textFilThree}>Todos</Text></View>
-              </TouchableOpacity>
-              
+              </TouchableOpacity> 
           </View>
-          
-          
+                  
          {/*Content*/}
           <View style={styles.main}>
           <ScrollView>
