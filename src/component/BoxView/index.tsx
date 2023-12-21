@@ -40,6 +40,7 @@ function Box(){
     area:"Trainne UX&UI "
 }
 ]  
+
    
     return(
         <SafeAreaView>

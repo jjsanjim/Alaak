@@ -7,9 +7,55 @@ import ArrowIcon from "../Icons/ArrowIcon";
 import CheckBox from "@react-native-community/checkbox";
 import { useState } from "react";
 
+const team = [
+    {
+        avatar:require("../../component/Images/Avatar-base(5).png"),
+        firstName:"Humberto ",
+        lastName:"Alonso",
+        area:"UX&UI Manager"
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(4).png"),
+        firstName:"Luis ",
+        lastName:"Mota",
+        area:"Trainne UX&UI "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(3).png"),
+        firstName:"César",
+        lastName:"Ramón",
+        area:"Trainne UX&UI "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(2).png"),
+        firstName:"Aline",
+        lastName:"Palacios",
+        area:"Trainne UX&UI "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(1).png"),
+        firstName:"Nathali",
+        lastName:"Ortiz",
+        area:"Trainne UX&UI "
+    },
+    {
+        avatar:require("../../component/Images//Avatar-base.png"),
+        firstName:"Vanessa",
+        lastName:"Luna",
+        area:"Trainne UX&UI "
+    },
+    {
+        avatar:require("../../component/Images//Avatar-base.png"),
+        firstName:"Vanessa",
+        lastName:"Luna",
+        area:"Trainne UX&UI "
+    },
+]
 
 function FilterSheet(){
     const [rememberPass, setRememberPass] = useState(false)
+    const [searchText,setSearchText] = useState('')
+
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -20,6 +66,7 @@ function FilterSheet(){
             </View>
             <View style={styles.main}>
                 <View style={styles.completeFilter}>
+              
                     <Text style={styles.textOne}>Filtrar por:</Text>
                     <View style={styles.cleanFilter}>
                         <Text style={styles.textClean}>Limpiar filtro</Text>
@@ -27,7 +74,9 @@ function FilterSheet(){
                 </View>
                 <View style={styles.search}>
                     <SearchIcon/>
-                    <Input style={{marginLeft:12}}
+                    <Input 
+                    onChangeText={(text)=> setSearchText(text)}
+                    style={{marginLeft:12}}
                     placeholderTextColor={"#333"}
                     placeholder="Recursos"/>
                 </View>
