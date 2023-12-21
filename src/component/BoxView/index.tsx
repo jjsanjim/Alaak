@@ -9,10 +9,8 @@ import BottomSheet, {BottomSheetBackdrop} from "@gorhom/bottom-sheet";
 import RhSheet from "../BottomSheets/rhbottomsh";
 
 
-function Box(){ 
+function Box(props){ 
     const navigation=useNavigation();
-    const bottomSheetRef = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => ['25%', '100%'], []);
   const designTeam = [
 
 {
@@ -69,7 +67,7 @@ function Box(){
                         </View>
                     </View>
                 </View>
-                <TouchableOpacity style={{alignItems:"flex-end"}}onPress={()=>bottomSheetRef.current?.expand(BottomSheet)}>
+                <TouchableOpacity style={{alignItems:"flex-end"}}onPress={()=>props.onViewAll()}>
                     <Text>ver todo  </Text>
                 </TouchableOpacity>
             </View>
@@ -106,28 +104,6 @@ function Box(){
                     </View>    
                         
             </View>
-            <BottomSheet
-            ref={bottomSheetRef}
-            index={-1}
-            snapPoints={snapPoints}
-            enableOverDrag
-            enablePanDownToClose={true}
-            backgroundStyle={{backgroundColor:"#fff"}}
-            backdropComponent={(props) => (
-                <BottomSheetBackdrop
-                {...props}
-                opacity={0.5}
-                enableTouchThrough={false}
-                appearsOnIndex={0}
-                disappearsOnIndex={-1}
-                style={[{backgroundColor:'rgba(0, 0, 0, 1)'}, StyleSheet.absoluteFillObject]}
-                />
-            )}
-        >
-            <ScrollView>
-                <RhSheet/>
-            </ScrollView>
-            </BottomSheet>
 
         </SafeAreaView>
     );
