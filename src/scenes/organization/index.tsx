@@ -1,5 +1,5 @@
-import React, {useMemo,useRef,useState,useInsertionEffect} from "react";
-import { SafeAreaView, View, Text, Image, StyleSheet, ScrollView, Button, Alert, TouchableOpacity} from "react-native";
+import React, {useMemo,useRef,useState,useInsertionEffect, useEffect} from "react";
+import { SafeAreaView, View, Text, Image, StyleSheet, ScrollView, Button, Alert, TouchableOpacity, Touchable} from "react-native";
 import Input from "../../component/AleBoxView/input";
 import Box from "../../component/AleBoxView";
 import styles from "../../component/Styles/BowViewStyles";
@@ -13,6 +13,36 @@ import BottomSheet, {BottomSheetBackdrop} from "@gorhom/bottom-sheet";
 import FilterSheet from "../../component/BottomSheets";
 
 const team = [
+    {
+        avatar:require("../../component/Images/Avatar-base(6).png"),
+        firstName:"Amaury ",
+        lastName:"Almanza",
+        area:"CEO "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(7).png"),
+        firstName:"Emilio ",
+        lastName:"Camargo",
+        area:"CTO "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(8).png"),
+        firstName:"César ",
+        lastName:"Mendoza",
+        area:"VP "
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(9).png"),
+        firstName:"Claudia ",
+        lastName:"Rodríguez",
+        area:"Product"
+    },
+    {
+        avatar:require("../../component/Images/Avatar-base(10).png"),
+        firstName:"Juan",
+        lastName:"Rivera",
+        area:"App MovileI"
+    },
     {
         avatar:require("../../component/Images/Avatar-base(5).png"),
         firstName:"Humberto ",
@@ -59,8 +89,16 @@ function OrganScene(){
  const snapPoints = useMemo(() => ['25%', '80%'], []);
  //hook
  const [searchText,setSearchText] = useState('')
+ const [buttonActive,setButtonActive] = useState("all") // "all" Vert todo - "mine" Mi equipo
+ const [teamFilter,setTeamFilter] =useState ([])
+ const myArea = "UX&UI";
  //console.log("search",team.filter((item)=> item.firstName.toLowerCase().includes(searchText.toLowerCase()) ))
   
+ useEffect(()=>{
+    const arrayFilter = team.filter((item)=> buttonActive === 'all' ? item : item.area.includes(myArea) )
+    const newTeam = arrayFilter.filter((item)=> item.firstName.toLowerCase().includes(searchText.toLowerCase()) || item.lastName.toLowerCase().includes(searchText.toLowerCase()) )
+    setTeamFilter(newTeam)
+},[buttonActive,searchText] )
  return (
       
        <SafeAreaView style={styles.container}>
@@ -97,20 +135,28 @@ function OrganScene(){
           </View>
           {/*Buttons Filter*/}
           <View style={styles.filter}>
-              <View style={styles.buttonShape}><Text style={styles.textFiltwo}>Filtros</Text></View>   
-              <TouchableOpacity onPress={()=>bottomSheetRef.current?.expand(BottomSheet)} style={styles.buttonShapeFour}><FilterIcon/></TouchableOpacity>
-              <View style={styles.buttonShapeTwo}><Text style={styles.textFiltwo}>Mi equipo</Text></View>
-              <TouchableOpacity onPress={()=>navigation.navigate("AllOrg")}>
-               <View style={styles.buttonShapeThree}><Text style={styles.textFilThree}>Todos</Text></View>
+              <View style={styles.buttonShape}><Text style={styles.textFil}>Filtros</Text></View>   
+              <TouchableOpacity onPress={()=>bottomSheetRef.current?.expand(BottomSheet)} style={styles.buttonShapeFour}>
+                <FilterIcon />
+              </TouchableOpacity>
+              <TouchableOpacity 
+              onPress={()=> setButtonActive("mine")}
+              style={[ buttonActive === "mine" ? styles.buttonShapeThree:styles.buttonShapeTwo]}>
+                <Text style={[buttonActive === "mine" ? styles.textFilThree: styles.textFiltwo]}>Mi equipo</Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={()=> setButtonActive("all")}>
+                <View style={[ buttonActive === "all" ? styles.buttonShapeThree:styles.buttonShapeTwo]}>
+                  <Text style={[buttonActive === "all" ? styles.textFilThree: styles.textFiltwo]}>Todos</Text>
+                </View>
               </TouchableOpacity> 
           </View>
                   
          {/*Content*/}
           <View style={styles.main}>
           <ScrollView>
-              <Text style={styles.texthree}> Departamento de Diseño </Text>
+              <Text style={styles.texthree}> Resultado de tu búsqueda </Text>
               <Box data={
-                team.filter((item)=> item.firstName.toLowerCase().includes(searchText.toLowerCase()) || item.lastName.toLowerCase().includes(searchText.toLowerCase()) )
+                teamFilter
               }/>
           </ScrollView>
           </View>

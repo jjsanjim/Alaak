@@ -42,7 +42,7 @@ textShape:{
    },
    textFiltwo:{
 
-       color: "#FFF",
+       color: "#333333",
        textAlign: "center",
        fontFamily: "Poppins",
        fontSize: 14,
@@ -54,14 +54,14 @@ textShape:{
    },
    textFilThree:{
 
-       color:"#333",
+       color:"#FFF",
        textAlign: "center",
        fontFamily: "Poppins",
        fontSize: 14,
        fontStyle: "normal",
        fontWeight: "500",
        height: 21,
-       width: 43,
+       width: 104,
        //margin:2,
    },
    textNames:{
@@ -189,34 +189,34 @@ container: {flex:1},
        width:80,
        height:33,
        borderRadius:100,
-       borderColor:"white",
+       borderColor:"#FFF",
        borderWidth:1,
-       backgroundColor: "white",
+       backgroundColor: "#FFF",
        marginLeft:15,
        justifyContent:"center",
        alignItems:"center"
    },
    buttonShapeTwo:{
 
-       width:104,
+       width:95,
        height:33,
        borderRadius:100,
-       borderColor:"#CDA100",
+       borderColor:"#FFF",
        borderWidth:1,
-       backgroundColor: "#CDA100",
-       marginLeft:15,
+       backgroundColor: "#FFF",
+       marginLeft:12,
        justifyContent:"center",
        alignItems:"center"
    },
    buttonShapeThree:{
 
-       width:74,
+       width:95,
        height:33,
        borderRadius:100,
-       borderColor:"white",
+       borderColor:"#CDA100",
        borderWidth:1,
-       backgroundColor: "white",
-       marginLeft:15,
+       backgroundColor: "#CDA100",
+       marginLeft:12,
        justifyContent:"center",
        alignItems:"center"
    },
