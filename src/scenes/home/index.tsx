@@ -52,10 +52,9 @@ function AlaakHome (){
                     alignItems:'center',
                     fontSize:17.71,
                     fontWeight:"700",
-                    marginTop:50}}> Hola Luis </Text>
+                    marginTop:50}}> Hola, Luis </Text>
                     
                 </View>
-                
                     <View style={{ justifyContent:'center',
                         alignItems:'center',
                         marginTop:70,
@@ -69,9 +68,7 @@ function AlaakHome (){
                         marginTop:70,
                         marginBottom:20}}>
                         <Conf/>
-                    </View> 
-                
-               
+                    </View>                
            </View>
 
 
@@ -114,9 +111,9 @@ function AlaakHome (){
                                    }}>
                                    <Ser/>
                                </View>
-                               <Text style={{marginLeft:15,
+                               <Text style={{marginLeft:19,
                                color:'#000000',fontSize:13}}>Pagar </Text>
-                               <Text style={{marginLeft:15,
+                               <Text style={{marginLeft:19,
                                color:'#000000',fontSize:13}}>Servicios </Text>
                            </TouchableOpacity>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Perfil")}>
