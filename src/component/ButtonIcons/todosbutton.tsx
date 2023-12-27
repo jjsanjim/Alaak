@@ -9,7 +9,7 @@ const Tds=()=> {
    return (
        <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
            <View style={{
-               marginTop:18,
+               marginTop:20,
                marginLeft:250,
                marginBottom:10,
                width:90,
