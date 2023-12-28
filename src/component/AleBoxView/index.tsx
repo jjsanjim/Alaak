@@ -6,35 +6,78 @@ import PenIcon from "../Icons/PenIcon";
 import { useNavigation } from "@react-navigation/native";
 
 
-//props = {data:[]}
-function Box({data}){
+
+
+function Box(){
     const navigation=useNavigation()
     return(
        <SafeAreaView>
- 
-    {        
-       //map me genera un clone del arreglo y lo podemos modificar
-        //array.map( (item,index,array,arrayOriginal)=>)
-        //[]    //{ITEM={AVATAR,NAME,LAST,AREA}
-        data.map((item,index)=>
-        {
-            return(     
-
-                <TouchableOpacity key={index} onPress={()=>navigation.navigate("Perfil")}>
-                    <View style={styles.squareShape}>
-                        <View style={{alignItems:"center", flexDirection:"row"}}>
-                            <Image style={styles.fotostyle} source={item.avatar}/>
-                                <View style={styles.textShape}>
-                                    <Text style={styles.textNames}>{item.firstName} {item.lastName}</Text>
-                                    <Text style={styles.textNamesTwo}>{item.area}</Text>
-                                </View>
+           <View style={styles.squareShape}>
+               <View style={{alignItems:"center", flexDirection:"row"}}>
+                   <Image style={styles.fotostyle} source={require("../Images/Avatar-base(5).png")}/>
+                       <View style={styles.textShape}>
+                           <Text style={styles.textNames}> Humberto Alonso </Text>
+                           <Text style={styles.textNamesTwo}> UX&UI Manager</Text>
+                       </View>
+               </View>
+               <PenIcon/>
+           </View>
+           <View style={styles.squareShape}>
+               <View style={{alignItems:"center", flexDirection:"row"}}>
+                   <Image style={styles.fotostyle} source={require("../Images/Avatar-base(4).png")}/>
+                       <View style={styles.textShape}>
+                           <Text style={styles.textNames}> Luis Mota </Text>
+                           <Text style={styles.textNamesTwo}> Trainne UX&UI </Text>
+                       </View>
+               </View>
+               <PenIcon/>
+           </View>
+           <View style={styles.squareShape}>
+               <View style={{alignItems:"center", flexDirection:"row"}}>
+                   <Image style={styles.fotostyle} source={require("../Images/Avatar-base(2).png")}/>
+                       <View style={styles.textShape}>
+                           <Text style={styles.textNames}> César Ramón </Text>
+                           <Text style={styles.textNamesTwo}> Trainne UX&UI </Text>
                         </View>
-                        <PenIcon/>
-                    </View>
-                 </TouchableOpacity>
-                )
-        })
-    }
+               </View>
+               <PenIcon/>
+           </View>
+           <View style={styles.squareShape}>
+                <View style={{alignItems:"center", flexDirection:"row"}}>
+                    <Image style={styles.fotostyle} source={require("../Images/Avatar-base(1).png")}/>
+                        <View style={styles.textShape}>
+                           <Text style={styles.textNames}> Aline Palacios </Text>
+                           <Text style={styles.textNamesTwo}> Trainne UX&UI </Text>
+                       </View>
+               </View>
+               <PenIcon/>
+           </View>
+           <TouchableOpacity onPress={()=>navigation.navigate("Perfil")}>
+           <View style={styles.squareShape}>
+           <View style={{alignItems:"center", flexDirection:"row"}}>
+               <Image style={styles.fotostyle} source={require("../Images/Avatar-base(3).png")}/>
+               <View/>
+                   <View style={styles.textShape}>
+                       <Text style={styles.textNames}> Nathali Ortiz </Text>
+                  
+                       <Text style={styles.textNamesTwo}> Trainne UX&UI </Text>
+                       </View>
+               </View>
+               <PenIcon/>
+           </View>
+           </TouchableOpacity>
+           <View style={styles.squareShape}>
+           <View style={{alignItems:"center", flexDirection:"row"}}>
+               <Image style={styles.fotostyle} source={require("../Images/Avatar-base.png")}/>
+               <View/>
+                   <View style={styles.textShape}>
+                       <Text style={styles.textNames}> Vanessa Luna </Text>
+                  
+                       <Text style={styles.textNamesTwo}> Trainne UX&UI </Text>
+                       </View>
+               </View>
+               <PenIcon/>
+           </View>
        </SafeAreaView>
     )
 

@@ -4,6 +4,9 @@ import styles from "../Styles/BowViewStyles";
 import FilterIcon from "../Icons/FilterIcon";
 import PenIcon from "../Icons/PenIcon";
 
+
+
+
 const Box= () =>
        <SafeAreaView>
            <View style={styles.squareShape}>
