@@ -63,11 +63,6 @@ function OrgantScene(){
 
 
 
-
-
-
-
-
            <View style={styles.main}>
            <ScrollView>
                <Text style={styles.texthree}> Resultados de tu búsqueda </Text>

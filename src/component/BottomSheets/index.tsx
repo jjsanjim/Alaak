@@ -6,60 +6,67 @@ import SearchIcon from "../Icons/SearchIcon";
 import ArrowIcon from "../Icons/ArrowIcon";
 import CheckBox from "@react-native-community/checkbox";
 import { useState } from "react";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const team = [
+
+const areas = [
     {
-        avatar:require("../../component/Images/Avatar-base(5).png"),
-        firstName:"Humberto ",
-        lastName:"Alonso",
-        area:"UX&UI Manager"
+        id:1,
+        name:"Recursos Humanos",
+        labelKey:"RH" 
     },
     {
-        avatar:require("../../component/Images/Avatar-base(4).png"),
-        firstName:"Luis ",
-        lastName:"Mota",
-        area:"Trainne UX&UI "
+        id:2,
+        name:"Diseño",
+        labelKey:"UX/UI" 
     },
     {
-        avatar:require("../../component/Images/Avatar-base(3).png"),
-        firstName:"César",
-        lastName:"Ramón",
-        area:"Trainne UX&UI "
+        id:3,
+        name:"Finanzas",
+        labelKey:"FN" 
     },
     {
-        avatar:require("../../component/Images/Avatar-base(2).png"),
-        firstName:"Aline",
-        lastName:"Palacios",
-        area:"Trainne UX&UI "
-    },
-    {
-        avatar:require("../../component/Images/Avatar-base(1).png"),
-        firstName:"Nathali",
-        lastName:"Ortiz",
-        area:"Trainne UX&UI "
-    },
-    {
-        avatar:require("../../component/Images//Avatar-base.png"),
-        firstName:"Vanessa",
-        lastName:"Luna",
-        area:"Trainne UX&UI "
-    },
-    {
-        avatar:require("../../component/Images//Avatar-base.png"),
-        firstName:"Vanessa",
-        lastName:"Luna",
-        area:"Trainne UX&UI "
+        id:4,
+        name:"Desarrollo",
+        labelKey:"DEV" 
     },
 ]
 
-function FilterSheet(){
+function FilterSheet( {onClose} ){
     const [rememberPass, setRememberPass] = useState(false)
     const [searchText,setSearchText] = useState('')
+    const [listFilter, setListFilter] = useState([]) 
+    
 
+
+    const onAddFilter = (area:any) =>{
+        const validIndex = listFilter.findIndex((itemF)=> itemF.id === area.id)
+        if(validIndex > 0){
+            setListFilter(prevState => prevState.filter(item=> item.id != area.id) )
+            /*
+            const newArray = [...listFilter]
+            newArray.splice(validIndex,0)
+            setListFilter(newArray)
+            */
+        }else{
+            setListFilter(prevState => [...prevState,area])
+/*
+            const newArray = [...listFilter]
+            newArray.push(area)
+            setListFilter(newArray)
+            */
+        }
+
+    }
+
+//props digging
     return(
         <View style={styles.container}>
             <View style={styles.header}>
             <View style={{alignItems:"center", flexDirection:"row", justifyContent:"space-between"}}>
+            <TouchableOpacity onPress={onClose}>
+                        <ArrowIcon/>        
+                    </TouchableOpacity>
                     <ArrowIcon/>
                 <Text style={styles.text}>Todos</Text>
             </View>
@@ -68,9 +75,9 @@ function FilterSheet(){
                 <View style={styles.completeFilter}>
               
                     <Text style={styles.textOne}>Filtrar por:</Text>
-                    <View style={styles.cleanFilter}>
+                    <TouchableOpacity onPress={()=>setListFilter([]) } style={styles.cleanFilter}>
                         <Text style={styles.textClean}>Limpiar filtro</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.search}>
                     <SearchIcon/>
@@ -83,36 +90,32 @@ function FilterSheet(){
                 <View style={{paddingHorizontal:24, paddingVertical:10}}>
                     <Text style={styles.textTwo}>Área</Text>
                 </View>
+                {/*content Filter */}
                 <View>
-                    <View style={styles.departments}>
-                        <Text style={styles.textTwo}>Recursos Humanos</Text>
+                    {/* item filter*/}
+                    {
+                        areas.map((area)=>(
+                            <View style={styles.departments} key={area.id}>
+                        <Text style={styles.textTwo}>{area.name}</Text>
                         <CheckBox 
-                            value={rememberPass}
-                            onValueChange={(event)=> {
-                            console.log(event)
-                            setRememberPass(event)}}/>
+                            value={ listFilter.find((item)=> item.id === area.id) ? true : false}
+                            onValueChange={event => {
+                               onAddFilter(area)
+                            }}
+                           />
                     </View>
-                    <View style={styles.departments}>
-                        <Text style={styles.textTwo}>Finanzas</Text>
-                        <CheckBox 
-                            value={rememberPass}
-                            onValueChange={(event)=> {
-                            console.log(event)
-                            setRememberPass(event)}}/>
-                    </View>
-                    <View style={styles.departments}>
-                        <Text style={styles.textTwo}>Diseño</Text>
-                        <CheckBox 
-                            value={rememberPass}
-                            onValueChange={(event)=> {
-                            console.log(event)
-                            setRememberPass(event)}}/>
-                    </View>
+                        ))
+                    }
                 </View>
                 <View style={styles.bottomFilter}>
-                    <View style={styles.setFilter}>
+                    <TouchableOpacity style={styles.setFilter} 
+                    onPress={()=>{
+                        setListFilter([])
+                        setSearchText('')
+                        onClose?.()
+                    }}>
                         <Text style={styles.textClean}>Cancelar</Text>
-                    </View>                    
+                    </TouchableOpacity>                    
                     <View style={styles.setFilterTwo}>
                         <Text style={styles.textCleanTwo}>Filtrar</Text>
                     </View>
