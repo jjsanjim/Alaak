@@ -5,7 +5,6 @@ import { AppNavigationParamsList } from "./AppNavigationParamsList";
 import AlaakScene from "./scenes/alaak";
 import AlaakHome from "./scenes/home";
 import OrganScene from "./scenes/organization";
-import OrgantScene from "./scenes/organization/todos";
 
 const AppStack = createNativeStackNavigator<AppNavigationParamsList>()
 
@@ -17,7 +16,6 @@ const AppNavigation: React.FC = () => {
             <AppStack.Screen  name="Home" component={AlaakHome}/>
             <AppStack.Screen  name="Perfil" component={AlaakScene} />
             <AppStack.Screen name="Organization" component={OrganScene}/>
-            <AppStack.Screen name="AllOrg" component={OrgantScene}/>
         </AppStack.Navigator>
     )
 }

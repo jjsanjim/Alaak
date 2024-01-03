@@ -21,7 +21,7 @@ function AlaakScene(){
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
-            <View style={styles.header}>
+            <View style={[t.bgGray800, t.flex3, t.justifyStart, t.itemsCenter, t.p4]}>
                 <Text style={[fontConfig["tag-title-level-2"], t.textWhite]}>
                     Organigrama
                 </Text>
@@ -29,19 +29,19 @@ function AlaakScene(){
                 <View style={styles.main}>
                     <Credential/>
                     <View style={styles.buttonBox}>
-                    <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Home")}>
+                    <TouchableOpacity style={[t.itemsCenter]} onPress={()=>navigation.navigate("Home")}>
                         <View style={styles.items}>
                             <CardSend/>
                         </View>
                         <Text>Transferir</Text>                     
                     </TouchableOpacity>
-                    <TouchableOpacity style={{alignItems:"center"}} /*onPress={()=>navigation.navigate("SignUp")}*/>
+                    <TouchableOpacity style={[t.itemsCenter]} /*onPress={()=>navigation.navigate("SignUp")}*/>
                         <View style={styles.items}>
                             <ScanBar/>
                         </View>
                         <Text>QR</Text>                     
                     </TouchableOpacity>
-                    <TouchableOpacity style={{alignItems:"center"}} /*onPress={()=>navigation.navigate("SignUp")}*/>
+                    <TouchableOpacity style={[t.itemsCenter]} /*onPress={()=>navigation.navigate("SignUp")}*/>
                         <View style={styles.items}>
                             <Add/>
                         </View>                     
