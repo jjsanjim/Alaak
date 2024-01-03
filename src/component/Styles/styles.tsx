@@ -36,7 +36,8 @@ const styles =StyleSheet.create({
         flex:2,
         backgroundColor:"#333",
         justifyContent:"flex-start",
-        alignItems:"center"
+        alignItems:"center",
+        paddingTop:15
     },
     textone:{
         fontSize:20,

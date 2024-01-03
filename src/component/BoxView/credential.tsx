@@ -14,7 +14,7 @@ const Credential =()=>
 
         <View style={styles.credShape}>
             <Image style={styles.fotostyle} source={{uri:"https://cdn.discordapp.com/attachments/1159543473754615918/1179875085008523415/Ellipse_5.png?ex=657b5f4d&is=6568ea4d&hm=869433b7808ce4544ee0decde970a281a8ea72e1a4e423108b93cc983c83d6cf&"}}/>
-            <Text style={styles.credName}>
+            <Text style={[styles.credName]}>
                 Nathali Ortíz
             </Text>
             <Text style={styles.textwo}>
