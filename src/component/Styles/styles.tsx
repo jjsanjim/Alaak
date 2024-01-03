@@ -43,7 +43,8 @@ const styles =StyleSheet.create({
         color:"#FFF",
         fontWeight:"700",
         fontStyle: "normal",
-        margin:20
+        margin:20,
+        fontFamily: "Poppins-Black"
     },
     main:{
         flex:8,
@@ -133,7 +134,8 @@ const styles =StyleSheet.create({
         color:"#1D1D1B",
         fontStyle:"normal",
         fontWeight: "700",
-        flexDirection:"column"
+        flexDirection:"column",
+        //fontFamily: "Poppins-Black"
     },
     textBoxtwo:{
         fontSize:13,
