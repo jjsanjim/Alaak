@@ -84,7 +84,7 @@ const fontConfig = {
     fontFamily: fontFamilyPoppins.BOLD,
     fontSize: size.S,
     lineHeight: lineHeight.S,
-    color: constants.colors.,
+    color: constants.colors.black,
   },
   'tag-subtitle-level-2': {
     fontFamily: fontFamilyInter.MEDIUM,

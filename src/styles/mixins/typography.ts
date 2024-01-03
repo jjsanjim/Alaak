@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { scaleFont } from '@/utils/scaleSizes';
+import { scaleFont } from '../../utils/scaleSizes';
 
 import { colors, fontSizes } from '../constants';
 
