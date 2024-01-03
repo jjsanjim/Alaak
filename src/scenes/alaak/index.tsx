@@ -9,6 +9,8 @@ import Add from "../../component/Icons/Add";
 import Credential from "../../component/BoxView/credential";
 import BottomSheet, {BottomSheetBackdrop} from "@gorhom/bottom-sheet";
 import RhSheet from "../../component/BottomSheets/rhbottomsh";
+import { t } from "../../styles";
+import { fontConfig } from "../../styles/Typography";
 
 function AlaakScene(){
     const navigation= useNavigation()
@@ -20,7 +22,7 @@ function AlaakScene(){
         <SafeAreaView style={styles.container}>
             <ScrollView>
             <View style={styles.header}>
-                <Text style={styles.textone}>
+                <Text style={[fontConfig["tag-title-level-2"], t.textWhite]}>
                     Organigrama
                 </Text>
             </View>
