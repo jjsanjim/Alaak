@@ -12,10 +12,11 @@ import RhSheet from "../../component/BottomSheets/rhbottomsh";
 import { t } from "../../styles";
 import { fontConfig } from "../../styles/Typography";
 
-function AlaakScene(){
+function AlaakScene({route}){
     const navigation= useNavigation()
     const bottomSheetRef = useRef<BottomSheet>(null);
     const SnapPoints = useMemo( ()=> ["25%", "75%"],[]);
+    const dataProfile = route.params.data
     /*const { animatedHandleHeight, animatedSnapPoints, animatedContentHeight, handleContentLayout } =
     useBottomSheetDynamicSnapPoints(points); */
     return (
@@ -27,7 +28,7 @@ function AlaakScene(){
                 </Text>
             </View>
                 <View style={styles.main}>
-                    <Credential/>
+                    <Credential dataProfile={dataProfile} />
                     <View style={styles.buttonBox}>
                     <TouchableOpacity style={[t.itemsCenter]} onPress={()=>navigation.navigate("Home")}>
                         <View style={styles.items}>

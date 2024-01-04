@@ -20,7 +20,7 @@ function Box({data}){
         {
             return(     
 
-                <TouchableOpacity key={index} onPress={()=>navigation.navigate("Perfil")}>
+                <TouchableOpacity key={index} onPress={()=>navigation.navigate("Perfil", {data:item})}>
                     <View style={styles.squareShape}>
                         <View style={{alignItems:"center", flexDirection:"row"}}>
                             <Image style={styles.fotostyle} source={item.avatar}/>
