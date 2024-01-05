@@ -71,7 +71,6 @@ function AlaakHome (){
                     </View>                
            </View>
 
-
            <View style={{flex:21,
                backgroundColor:'#333',
                justifyContent:'center',
