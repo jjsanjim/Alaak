@@ -22,7 +22,7 @@ const Credential =({dataProfile})=>
             </Text>
             <View style={styles.email}>
                 <Text style={styles.texthree}>
-                     nathali.oo@maanyuba.com      
+                     {dataProfile.email}      
                 </Text>
                 <Copy/>
             </View>

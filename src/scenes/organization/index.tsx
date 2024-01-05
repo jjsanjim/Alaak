@@ -17,67 +17,85 @@ const team = [
         avatar:require("../../component/Images/Avatar-base(6).png"),
         firstName:"Amaury ",
         lastName:"Almanza",
-        area:"CEO "
+        area:"CEO ",
+        email: "amaury@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(7).png"),
         firstName:"Emilio ",
         lastName:"Camargo",
-        area:"CTO "
+        area:"CTO ",
+        email: "emilio@maanyuba.com" 
     },
     {
         avatar:require("../../component/Images/Avatar-base(8).png"),
         firstName:"César ",
         lastName:"Mendoza",
-        area:"VP "
+        area:"VP ",
+        email: "cesar@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(9).png"),
         firstName:"Claudia ",
         lastName:"Rodríguez",
-        area:"Product"
+        area:"Product",
+        email: "claudia@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(10).png"),
         firstName:"Juan",
         lastName:"Rivera",
-        area:"App MovileI"
+        area:"App MovileI",
+        email: "juan.ro@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(5).png"),
         firstName:"Humberto ",
         lastName:"Alonso",
-        area:"UX&UI Manager"
+        area:"UX&UI Manager",
+        email: "humberto.am@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(4).png"),
         firstName:"Luis ",
         lastName:"Mota",
-        area:"Trainne UX&UI "
+        area:"Trainne UX&UI ",
+        email: "luis.mg@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(2).png"),
         firstName:"César",
         lastName:"Ramón",
-        area:"Trainne UX&UI "
+        area:"Trainne UX&UI ",
+        email: "maki@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(1).png"),
         firstName:"Aline",
         lastName:"Palacios",
-        area:"Trainne UX&UI "
+        area:"Trainne UX&UI ",
+        email: "aline.pd@maanyuba.com"
     },
     {
         avatar:require("../../component/Images/Avatar-base(3).png"),
         firstName:"Nathali",
         lastName:"Ortiz",
-        area:"Trainne UX&UI "
+        area:"Trainne UX&UI ",
+        email: "emilio@maanyuba.com"
     },
     {
         avatar:require("../../component/Images//Avatar-base.png"),
         firstName:"Vanessa",
         lastName:"Luna",
-        area:"Trainne UX&UI "
+        area:"Trainne UX&UI ",
+        email: "vanessa.lc@maanyuba.com"
+    },
+    {
+        avatar:require("../../component/Images//Avatar-base.png"),
+        firstName:"Dylan",
+        lastName:"Torres",
+        area:"Developer",
+        email: "dylan.tc@maanyuba.com"
     }
 ]
 
