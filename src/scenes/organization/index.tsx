@@ -109,6 +109,7 @@ function OrganScene(){
  const [searchText,setSearchText] = useState('')
  const [buttonActive,setButtonActive] = useState("all") // "all" Vert todo - "mine" Mi equipo
  const [teamFilter,setTeamFilter] =useState ([])
+ const [chips,setChips] = useState([]);
  const myArea = "UX&UI";
  //console.log("search",team.filter((item)=> item.firstName.toLowerCase().includes(searchText.toLowerCase()) ))
   
@@ -168,7 +169,21 @@ function OrganScene(){
                 </View>
               </TouchableOpacity> 
           </View>
-                  
+
+         {/*Filtros by bottomSheet*/}
+         <View style={styles.fil}>
+         <View style={{flexDirection:'row',flexWrap:"wrap"}}>
+           {chips.map((chip)=> (
+            <View key={chip.id} style={{flex:1,width:95,height:33,borderRadius:100,borderColor:"#FFF",
+            borderWidth:1,backgroundColor: "#FFF",marginLeft:12,justifyContent:"center",alignItems:"center"}}>
+            <Text style={{color: "#333333",textAlign: "center",fontFamily: "Poppins",fontSize: 14,fontStyle: "normal",
+            fontWeight: "500",height: 21,width: 104,}}>{chip.labelKey}</Text>  
+            
+            </View>
+            
+           ))}    
+        </View>  
+        </View>
          {/*Content*/}
           <View style={styles.main}>
           <ScrollView>
@@ -199,7 +214,7 @@ function OrganScene(){
            )}
        >
            <ScrollView>
-               <FilterSheet onClose={()=>bottomSheetRef.current?.close()}/>
+               <FilterSheet onClose={()=>bottomSheetRef.current?.close()} updateFilter={setChips}/>
            </ScrollView>
            </BottomSheet>
            
