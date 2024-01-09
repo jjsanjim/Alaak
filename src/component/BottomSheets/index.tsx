@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, Alert} from "react-native";
 import styles from "../Styles/BottomSheet";
 import Input from "../AleBoxView/input";
@@ -32,7 +32,7 @@ const areas = [
     },
 ]
 
-function FilterSheet( {onClose} ){
+function FilterSheet( {onClose,updateFilter} ){
     const [rememberPass, setRememberPass] = useState(false)
     const [searchText,setSearchText] = useState('')
     const [listFilter, setListFilter] = useState([]) 
@@ -58,16 +58,24 @@ function FilterSheet( {onClose} ){
         }
 
     }
-
+//useEffect "cuando un elemento se actualiza" "Cuando el componente se va a morir"
+useEffect(()=>{
+    updateFilter(listFilter)
+},[listFilter.length])
 //props digging
-    return(
+const onReset = ()=>{
+        setListFilter([])
+        setSearchText('')
+        onClose?.()
+}
+
+    return (
         <View style={styles.container}>
             <View style={styles.header}>
             <View style={{alignItems:"center", flexDirection:"row", justifyContent:"space-between"}}>
-            <TouchableOpacity onPress={onClose}>
+            <TouchableOpacity onPress={onReset}>
                         <ArrowIcon/>        
                     </TouchableOpacity>
-                    <ArrowIcon/>
                 <Text style={styles.text}>Todos</Text>
             </View>
             </View>
@@ -85,7 +93,9 @@ function FilterSheet( {onClose} ){
                     onChangeText={(text)=> setSearchText(text)}
                     style={{marginLeft:12}}
                     placeholderTextColor={"#333"}
-                    placeholder="Recursos"/>
+                    placeholder="Recursos"
+                    value={searchText}/>
+        
                 </View>
                 <View style={{paddingHorizontal:24, paddingVertical:10}}>
                     <Text style={styles.textTwo}>Área</Text>
@@ -109,15 +119,14 @@ function FilterSheet( {onClose} ){
                 </View>
                 <View style={styles.bottomFilter}>
                     <TouchableOpacity style={styles.setFilter} 
-                    onPress={()=>{
-                        setListFilter([])
-                        setSearchText('')
-                        onClose?.()
-                    }}>
+                    onPress={onReset}>
                         <Text style={styles.textClean}>Cancelar</Text>
                     </TouchableOpacity>                    
                     <View style={styles.setFilterTwo}>
+                    <TouchableOpacity style={styles.setFilter} 
+                     onPress={onClose}>
                         <Text style={styles.textCleanTwo}>Filtrar</Text>
+                        </TouchableOpacity>  
                     </View>
                 </View>
             </View>

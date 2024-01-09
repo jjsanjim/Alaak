@@ -100,7 +100,7 @@ textShape:{
    },
 container: {flex:1},
    header:{
-       //flex:1,
+       
        backgroundColor:"#F5F7F8",
        justifyContent:"flex-end",
        alignItems: "stretch",
@@ -153,6 +153,14 @@ container: {flex:1},
        backgroundColor:"#333",
        alignItems: "center",
    },
+   fil:{
+    flex:1,
+    backgroundColor:"#333",
+    alignItems: "flex-start",
+    flexDirection:"row",
+    justifyContent:"flex-start",
+  
+},
    buttonSearch:{
 
        flex:1,
