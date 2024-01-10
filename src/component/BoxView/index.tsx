@@ -95,7 +95,7 @@ function Box(props){
                     <View style={{flexDirection:"row", justifyContent:"space-between"}}>
                         {designTeam.map((item,index)=>{
                             return(
-                                <View style={styles.persons}>
+                                <View style={styles.persons} key={index}>
                                     <Image style={styles.fotoBox} source={item.avatar}/>
                                     <Text style={styles.personsName}>{item.firstName}</Text>
                                     <Text style={styles.personsName}>{item.lastName}</Text>
