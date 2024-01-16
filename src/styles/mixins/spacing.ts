@@ -879,4 +879,10 @@ export default StyleSheet.create({
   g6: {
     gap: spacing.xl,
   },
+  g7: {
+    gap: spacing.xxxxxxxxxl,
+  },
+  g8: {
+    gap: spacing.xxxxxxxxxxl,
+  },
 });
