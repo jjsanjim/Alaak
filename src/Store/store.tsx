@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import teamReducer from "./Reducers/teamReducers";
+import teamReducers from "./Reducers/teamReducers";
 
 
 
 const reducers = combineReducers({
-    team: teamReducer,
+    team: teamReducers,
 
 })
 

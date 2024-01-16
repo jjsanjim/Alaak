@@ -13,6 +13,7 @@ import Org from "../../component/Icons/Organigrama";
 import Ser from "../../component/Icons/Servicios";
 import Tra from "../../component/Icons/Tra";
 import Mas from "../../component/Icons/Mas";
+import { t } from "../../styles";
 function AlaakHome (){
     const navigation=useNavigation()
     return(
@@ -22,53 +23,41 @@ function AlaakHome (){
                zIndex:999,
                flexDirection:'row',
                backgroundColor:'#CDA100',
-               justifyContent:'space-around',
+               justifyContent:'space-between',
                paddingHorizontal:16,
                alignItems:'center'}}>
-            <View style={{position:'relative',width:124,height:90}}>
-                <View style={{
-                    top:30,
-                    position:'absolute',
-                    zIndex:999,
-                    width:100,
-                    height:100,
-                    backgroundColor:'#CDA100',
-                    overflow:'hidden',
-                    borderRadius:100,
-                    justifyContent:'center',
-                    alignItems:'center',
-                    padding:10
-                }}>
-                    
-                    <Image source={require("../../component/Images/Rectangle5.png")}
-                    style={{width: '100%', height: '100%', borderRadius:100}}/> 
-                </View>
-
-
-            </View>   
-                <View >
-                <Text style={{color:'#FFFFFF',
-                    justifyContent:'center',
-                    alignItems:'center',
-                    fontSize:17.71,
-                    fontWeight:"700",
-                    marginTop:50}}> Hola, Luis </Text>
-                    
-                </View>
-                    <View style={{ justifyContent:'center',
+                <View style={{position:'relative',width:124,height:90}}>
+                    <View style={{
+                        top:30,
+                        position:'absolute',
+                        zIndex:999,
+                        width:100,
+                        height:100,
+                        backgroundColor:'#CDA100',
+                        overflow:'hidden',
+                        borderRadius:100,
+                        justifyContent:'center',
                         alignItems:'center',
-                        marginTop:70,
-                        marginBottom:20,
-                        marginStart:140,
-                        marginRight:5}}>
-                        <Not/>
+                        padding:10
+                        }}>
+                    
+                        <Image source={require("../../component/Images/Rectangle5.png")}
+                        style={{width: '100%', height: '100%', borderRadius:100}}/> 
                     </View>
-                    <View style={{justifyContent:'center',
-                        alignItems:'center',
-                        marginTop:70,
-                        marginBottom:20}}>
-                        <Conf/>
-                    </View>                
+                </View> 
+
+                <View style={[t.flexRow, t.g8, t.selfEnd]}>
+                    <Text style={{color:'#FFFFFF',
+                        //justifyContent:'center',
+                        //alignItems:'flex-start',
+                        fontSize:17.71,
+                        fontWeight:"700",
+                        }}> Hola, Luis </Text> 
+                        <View style={[t.flexRow]}>
+                            <Not/>
+                            <Conf/>
+                        </View>     
+                </View>     
            </View>
 
            <View style={{flex:21,
