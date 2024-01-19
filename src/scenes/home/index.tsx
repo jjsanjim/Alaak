@@ -64,7 +64,7 @@ function AlaakHome (){
                //backgroundColor:'#333',
                justifyContent:'center',
                alignItems:'center',
-               paddingHorizontal:10,
+               paddingHorizontal:0,
                width:"auto"}}>
                 <ScrollView>
                   <View style={{padding:20}}>
