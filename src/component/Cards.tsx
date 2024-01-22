@@ -7,7 +7,7 @@ function Card(props) {
        <View
         style={{
            padding:16,
-           //width: "auto",
+           width: "100%",
            minHeight:131,
            borderRadius: 15,
            marginBottom:10,
