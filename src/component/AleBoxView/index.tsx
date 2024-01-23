@@ -1,42 +1,56 @@
-import React from "react";
-import {Text, SafeAreaView, View, StyleSheet, Image, TouchableOpacity} from "react-native";
-import styles from "../Styles/BowViewStyles";
-import FilterIcon from "../Icons/FilterIcon";
-import PenIcon from "../Icons/PenIcon";
-import { useNavigation } from "@react-navigation/native";
+import React from 'react';
+import {
+  Text,
+  SafeAreaView,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  FlatList,
+} from 'react-native';
+import styles from '../Styles/BowViewStyles';
+import FilterIcon from '../Icons/FilterIcon';
+import PenIcon from '../Icons/PenIcon';
+import {useNavigation} from '@react-navigation/native';
+import { enableLayoutAnimations } from 'react-native-reanimated';
+import { panGestureHandlerCustomNativeProps } from 'react-native-gesture-handler/lib/typescript/handlers/PanGestureHandler';
 
+const ListItem = ({item, navigation}) => (
+  <TouchableOpacity
+    onPress={() => navigation.navigate('Perfil', {data: item})}
+    >
+    <View style={styles.squareShape}>
+      <View style={{alignItems: 'center', flexDirection: 'row'}}>
+        <Image style={styles.fotostyle} source={item.avatar} />
+        <View style={styles.textShape}>
+          <Text style={styles.textNames}>
+            {item.firstName} {item.lastName}
+          </Text>
+          <Text style={styles.textNamesTwo}>{item.area}</Text>
+        </View>
+      </View>
+      <PenIcon />
+    </View>
+  </TouchableOpacity>
+);
 
-//props = {data:[]}
-function Box({data}){
-    const navigation=useNavigation()
-    return(
-       <SafeAreaView>
- 
-    {        
-       //map me genera un clone del arreglo y lo podemos modificar
-        //array.map( (item,index,array,arrayOriginal)=>)
-        //[]    //{ITEM={AVATAR,NAME,LAST,AREA}
-        data.map((item,index)=>
-        {
-            return(     
-
-                <TouchableOpacity key={index} onPress={()=>navigation.navigate("Perfil", {data:item})}>
-                    <View style={styles.squareShape}>
-                        <View style={{alignItems:"center", flexDirection:"row"}}>
-                            <Image style={styles.fotostyle} source={item.avatar}/>
-                                <View style={styles.textShape}>
-                                    <Text style={styles.textNames}>{item.firstName} {item.lastName}</Text>
-                                    <Text style={styles.textNamesTwo}>{item.area}</Text>
-                                </View>
-                        </View>
-                        <PenIcon/>
-                    </View>
-                 </TouchableOpacity>
-                )
-        })
-    }
-       </SafeAreaView>
-    )
-
+function Box({data}) {
+  const navigation = useNavigation();
+  return (
+    <FlatList
+      data={data}
+      keyExtractor={(item, index) => `${index}`}
+      renderItem={({item})=> <ListItem item={item}  /*{...props}*/ />}
+      ListEmptyComponent={()=> (<View>
+        <Text style={{color:"#fff", fontSize:24}}>No hay resultados</Text>
+      </View>)}
+      ItemSeparatorComponent={()=> <View style ={{height:15,width:"100"}}/>}
+      style={{paddingTop:15}}
+      ListHeaderComponent={()=><Text style={{color:"#fff"}}> Resultado de tu búsqueda </Text>}
+      stickyHeaderHiddenOnScroll
+    />
+  );
 }
 export default Box;
+
+ 

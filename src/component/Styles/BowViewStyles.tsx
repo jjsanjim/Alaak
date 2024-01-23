@@ -7,7 +7,7 @@ const styles =StyleSheet.create({
        width: 366,
        backgroundColor: "white",
        borderRadius:16,
-       marginTop: 15,
+       //marginTop: 15,
        justifyContent: "space-between",
        alignItems: "center",
        flexDirection:"row",
