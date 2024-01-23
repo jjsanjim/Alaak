@@ -18,7 +18,7 @@ function AlaakHome (){
     const navigation=useNavigation()
     return(
        <SafeAreaView style={{flex:1,
-       backgroundColor:'#333'}}>
+        backgroundColor:'#333'}}>
            <View style={{
                zIndex:999,
                flexDirection:'row',
@@ -28,11 +28,11 @@ function AlaakHome (){
                alignItems:'center'}}>
                 <View style={{position:'relative',width:124,height:90}}>
                     <View style={{
-                        top:30,
+                        top:10,
                         position:'absolute',
                         zIndex:999,
-                        width:100,
-                        height:100,
+                        width:130,
+                        height:130,
                         backgroundColor:'#CDA100',
                         overflow:'hidden',
                         borderRadius:100,
@@ -61,9 +61,11 @@ function AlaakHome (){
            </View>
 
            <View style={{flex:21,
-               backgroundColor:'#333',
+               //backgroundColor:'#333',
                justifyContent:'center',
-               alignItems:'center'}}>
+               //alignItems:'center',
+               paddingHorizontal:0,
+               width:"auto"}}>
                 <ScrollView>
                   <View style={{padding:20}}>
                     <ButtonIcon/>
