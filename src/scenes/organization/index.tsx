@@ -28,6 +28,8 @@ import SettingIcon from '../../component/Icons/SettingIcon';
 import {useNavigation} from '@react-navigation/native';
 import BottomSheet, {BottomSheetBackdrop} from '@gorhom/bottom-sheet';
 import FilterSheet from '../../component/BottomSheets';
+import CloseCircleIcon from '../../component/Icons/CloseCircleIcon';
+import {addNewPartner} from '../../Store/Reducers/teamReducers';
 
 const team = [
   {
@@ -141,6 +143,17 @@ function OrganScene() {
     );
     setTeamFilter(newTeam);
   }, [buttonActive, searchText]);
+
+  const deleteBySplice = chip => {
+    const newArr = [...chips];
+    newArr.splice(chip, 1);
+    //console.log("id",chip)
+    setChips(newArr);
+  };
+  const deleteByFilter = id => {
+    setChips(prevState => prevState.filter(chip => chip.id != id));
+  };
+  console.log('id', chips);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -150,11 +163,17 @@ function OrganScene() {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <ArrowIcon />
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <ArrowIcon />
+          </TouchableOpacity>
           <Text style={styles.text}> Perfil Empresarial </Text>
           <View style={{flexDirection: 'row'}}>
-            <NotificationIcon />
-            <SettingIcon />
+            <TouchableOpacity onPress={() => console.log('Noti')}>
+              <NotificationIcon />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log('Setting')}>
+              <SettingIcon />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -224,44 +243,25 @@ function OrganScene() {
       </View>
 
       {/*Filtros by bottomSheet*/}
-{chips.length?<View style={styles.fil}>
-        <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-          {chips.map(chip => (
-            <View
-              key={chip.id}
-              style={{
-                flex: 1,
-                width: 95,
-                height: 33,
-                borderRadius: 100,
-                borderColor: '#FFF',
-                borderWidth: 1,
-                backgroundColor: '#FFF',
-                marginLeft: 12,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text
-                style={{
-                  color: '#333333',
-                  textAlign: 'center',
-                  fontFamily: 'Poppins',
-                  fontSize: 14,
-                  fontStyle: 'normal',
-                  fontWeight: '500',
-                  height: 21,
-                  width: 104,
-                }}>
-                {chip.labelKey}
-              </Text>
-            </View>
-          ))}
+      {chips.length ? (
+        <View style={styles.fil}>
+          <View style={{alignItems: 'center', flexDirection: 'row'}}>
+            {chips.map(chip => (
+              <View key={chip.id} style={styles.buttonShapeF}>
+                <Text style={styles.textFilF}>{chip.labelKey}</Text>
+                <TouchableOpacity onPress={() => deleteByFilter(chip.id)}>
+                  {/*} ()=>deleteBySplice(item)}>*/}
+                  <CloseCircleIcon />
+                </TouchableOpacity>
+              </View>
+            ))}
+          </View>
         </View>
-      </View>: null}
+      ) : null}
 
       {/*Content*/}
       <View style={styles.main}>
-          <Box data={teamFilter} />
+        <Box data={teamFilter} />
       </View>
 
       <BottomSheet
