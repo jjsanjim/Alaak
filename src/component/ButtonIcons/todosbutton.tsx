@@ -22,7 +22,7 @@ const Tds=()=> {
                padding:10}}>
                <Text style={{
                    color:'#000000'
-               }}> Ver todos </Text>
+               }}> ver todos </Text>
                <Sig/>
            </View>
        </TouchableOpacity>

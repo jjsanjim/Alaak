@@ -31,13 +31,13 @@ function AlaakHome (){
                         top:10,
                         position:'absolute',
                         zIndex:999,
-                        width:130,
-                        height:130,
+                        width:105,
+                        height:105,
                         backgroundColor:'#CDA100',
                         overflow:'hidden',
                         borderRadius:100,
-                        justifyContent:'center',
-                        alignItems:'center',
+                        //justifyContent:'center',
+                        //alignItems:'center',
                         padding:10
                         }}>
                     
@@ -46,7 +46,7 @@ function AlaakHome (){
                     </View>
                 </View> 
 
-                <View style={[t.flexRow, t.g8, t.selfEnd]}>
+                <View style={[t.flexRow, t.g9, t.selfCenter]}>
                     <Text style={{color:'#FFFFFF',
                         //justifyContent:'center',
                         //alignItems:'flex-start',

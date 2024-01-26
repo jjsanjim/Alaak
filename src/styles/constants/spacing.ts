@@ -15,6 +15,7 @@ const spacing = {
   xxxxxxxxl: 64,
   xxxxxxxxxl: 78,
   xxxxxxxxxxl: 95,
+  xxxxxxxxxxxl: 99,
 };
 
 export default spacing;
