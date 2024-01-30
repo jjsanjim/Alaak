@@ -26,7 +26,7 @@ function AlaakHome (){
                justifyContent:'space-between',
                paddingHorizontal:16,
                alignItems:'center'}}>
-                <View style={{position:'relative',width:124,height:90}}>
+                <View style={{position:'relative',width:100,height:85}}>
                     <View style={{
                         top:10,
                         position:'absolute',
