@@ -72,7 +72,7 @@ function AlaakHome (){
                   </View>
                   
                    <Card>
-                       <View style={{flexDirection:'row', justifyContent:"space-evenly"}}>
+                       <View style={{flexDirection:'row',alignItems:'center', justifyContent:"space-evenly"}}>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Organization")}>
                               
                                <View style={{
@@ -89,7 +89,7 @@ function AlaakHome (){
                                color:'#000000',fontSize:13}}>Organigrama</Text>
                                
                            </TouchableOpacity>
-                           <TouchableOpacity style={{alignItems:"center"}}>
+                           <TouchableOpacity style={{alignItems:'center'}}>
                                <View style={{
                                    marginLeft:15,
                                    width:51,
