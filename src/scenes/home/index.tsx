@@ -46,17 +46,22 @@ function AlaakHome (){
                     </View>
                 </View> 
 
-                <View style={[t.flexRow, t.g9, t.selfCenter]}>
+                <View style={[t.flexRow,t.g9, t.selfCenter]}>
                     <Text style={{color:'#FFFFFF',
                         //justifyContent:'center',
                         //alignItems:'flex-start',
                         fontSize:17.71,
                         fontWeight:"700",
                         }}> Hola, Luis </Text> 
-                        <View style={[t.flexRow]}>
-                            <Not/>
-                            <Conf/>
-                        </View>     
+                        <View style={{flexDirection:'row'}}>
+                            <TouchableOpacity onPress={()=>console.log('Noti')}>
+                                <Not/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={()=>console.log('Setting')}>
+                                <Conf/>
+                            </TouchableOpacity>
+                        </View>
+                              
                 </View>     
            </View>
 
@@ -66,11 +71,11 @@ function AlaakHome (){
                //alignItems:'center',
                paddingHorizontal:0,
                width:"auto"}}>
-                <ScrollView>
-                  <View style={{padding:20}}>
-                    <ButtonIcon/>
-                  </View>
+                    <View style={{padding:20}}>
+                        <ButtonIcon/>
+                    </View>
                   
+                <ScrollView>
                    <Card>
                        <View style={{flexDirection:'row',alignItems:'center', justifyContent:"space-evenly"}}>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Organization")}>
@@ -201,9 +206,9 @@ function AlaakHome (){
                                    marginTop:17
                                    }}>
                                    <Text style={{width:30,
-                                   height:30,fontSize:16,color:'#FFF'}}> RH</Text>
+                                   height:25,fontSize:16,color:'#FFF'}}> RH</Text>
                                </View>
-                               <Text style={{marginLeft:15,
+                               <Text style={{marginLeft:20,
                                    color:'#000000',fontSize:13}}>Recursos</Text>
                                    <Text style={{marginLeft:15,
                                    color:'#000000',fontSize:13}}>Humanos</Text>
