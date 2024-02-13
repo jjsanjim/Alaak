@@ -30,7 +30,7 @@ function AlaakScene({route}) {
   /*const { animatedHandleHeight, animatedSnapPoints, animatedContentHeight, handleContentLayout } =
     useBottomSheetDynamicSnapPoints(points); */
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView>
         <View
           style={[t.bgGray800, t.flex3, t.justifyStart, t.itemsCenter, t.p4]}>
@@ -104,7 +104,7 @@ function AlaakScene({route}) {
           <RhSheet />
         </ScrollView>
       </BottomSheet>
-    </SafeAreaView>
+    </View>
   );
 }
 export default AlaakScene;

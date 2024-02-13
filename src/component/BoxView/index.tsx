@@ -7,6 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 import Medal from "../Icons/Medal";
 import BottomSheet, {BottomSheetBackdrop} from "@gorhom/bottom-sheet";
 import RhSheet from "../BottomSheets/rhbottomsh";
+import {t} from "../../styles"
 
 
 function Box(props){ 
@@ -39,11 +40,10 @@ function Box(props){
 }
 ]  
 
-   
     return(
         <SafeAreaView>
             <View style={styles.squareShape}>
-                <Text style={styles.textNames}>Información Personal </Text>
+                <Text style={[t.textGray800, t.fontSansBold, t.textLg]}>Información Personal </Text>
                 <View>
                     <View style={styles.littleSquare}>
                         <View style={{flexDirection:"row"}}>
@@ -75,7 +75,7 @@ function Box(props){
             <View style={styles.squareShape}>
                 <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between"}}>
                     <View style={{flexDirection:"row",alignItems:"center"}}>
-                        <Text style={styles.textNames}> Jefe </Text>
+                        <Text style={[t.textGray800, t.fontSansBold, t.textLg]}> Jefe </Text>
                         <Medal/>
                     </View>
                     <TouchableOpacity onPress={()=>navigation.navigate("Organization")}>
@@ -91,15 +91,18 @@ function Box(props){
                                              
                     </TouchableOpacity>
                 
-                <Text style={styles.textNames}> Equipo de Humberto </Text>
+                <Text style={[t.textGray800, t.fontSansBold, t.textLg]}> Equipo de Humberto </Text>
                     <View style={{flexDirection:"row", justifyContent:"space-between"}}>
                         {designTeam.map((item,index)=>{
                             return(
-                                <View style={styles.persons} key={index}>
+                                <TouchableOpacity onPress={() => navigation.navigate('Perfil', {data: item})}>
+                                    <View style={styles.persons} key={index}>
                                     <Image style={styles.fotoBox} source={item.avatar}/>
                                     <Text style={styles.personsName}>{item.firstName}</Text>
                                     <Text style={styles.personsName}>{item.lastName}</Text>
                                 </View>
+                                </TouchableOpacity>
+                                
                             )
                         })}
                     </View>    
