@@ -102,9 +102,9 @@ function AlaakHome (){
                                    <Ser/>
                                </View>
                                <Text style={{marginLeft:19,
-                               color:'#000000',fontSize:13}}>Pagar </Text>
+                               color:'#000000',fontSize:12}}>Pagar </Text>
                                <Text style={{marginLeft:19,
-                               color:'#000000',fontSize:13}}>Servicios </Text>
+                               color:'#000000',fontSize:12}}>Servicios </Text>
                            </TouchableOpacity>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Perfil")}>
                                <View style={{
