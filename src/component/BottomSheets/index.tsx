@@ -89,26 +89,31 @@ function FilterSheet({onClose, updateFilter}) {
             <Text style={styles.textClean}>Limpiar filtro</Text>
           </TouchableOpacity>
         </View>
+        {/* filter */}
         <View style={styles.search}>
           <SearchIcon />
           <Input
             onChangeText={text => setSearchText(text)}
             style={{marginLeft: 12}}
-            placeholderTextColor={'#333'}
+            placeholderTextColor={'#595D5F'}
             placeholder="Recursos"
             value={searchText}
           />
         </View>
-        <View style={{paddingHorizontal: 24, paddingVertical: 10}}>
+        <View style={styles.are}>
           <Text style={styles.textTwo}>Área</Text>
         </View>
         {/*content Filter */}
+       
         <View>
           {/* item filter*/}
           {areas.map(area => (
             <View style={styles.departments} key={area.id}>
-              <Text style={styles.textTwo}>{area.name}</Text>
+              <TouchableOpacity>
+              <Text style={styles.textThree}>{area.name}</Text>
+              </TouchableOpacity>
               <CheckBox
+               
                 value={
                   listFilter.find(item => item.id === area.id) ? true : false
                 }
