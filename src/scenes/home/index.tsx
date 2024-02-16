@@ -45,8 +45,7 @@ function AlaakHome (){
                         style={{width: '100%', height: '100%', borderRadius:100}}/> 
                     </View>
                 </View> 
-
-                <View style={[t.flexRow,t.g9, t.selfCenter]}>
+                <View style={[t.flexRow, t.g9, t.selfCenter]}>
                     <Text style={{color:'#FFFFFF',
                         //justifyContent:'center',
                         //alignItems:'flex-start',
