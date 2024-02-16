@@ -123,7 +123,7 @@ function OrganScene() {
   //ref
   const bottomSheetRef = useRef<BottomSheet>(null);
   // variables
-  const snapPoints = useMemo(() => ['25%', '93%'], []);
+  const snapPoints = useMemo(() => ['25%', '86%'], []);
   //hook
   const [searchText, setSearchText] = useState('');
   const [buttonActive, setButtonActive] = useState('all'); // "all" Vert todo - "mine" Mi equipo

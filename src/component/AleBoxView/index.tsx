@@ -46,10 +46,10 @@ function Box({data}) {
           <Text style={{color: '#fff', fontSize: 24}}>No hay resultados</Text>
         </View>
       )}
-      ItemSeparatorComponent={() => <View style={{height: 15, width: '100'}} />}
-      style={{paddingTop: 15}}
+      ItemSeparatorComponent={() => <View style={{height:15, width: '100'}} />}
+      style={{paddingTop: 1}}
       ListHeaderComponent={() => (
-        <Text style={{color: '#fff'}}> Resultado de tu búsqueda </Text>
+        <Text style={{color: '#fff',marginBottom:18}}> Resultado de tu búsqueda </Text>
       )}
       stickyHeaderHiddenOnScroll
     />
