@@ -77,7 +77,7 @@ function AlaakHome (){
                   
                 <ScrollView>
                    <Card>
-                       <View style={{flexDirection:'row',alignItems:'center', justifyContent:"space-evenly"}}>
+                       <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Organization")}>
                               
                                <View style={{
@@ -149,6 +149,7 @@ function AlaakHome (){
                            <Eqp/>
                        </View>
                        <View style={{flexDirection:'row'}}>
+                          <TouchableOpacity>
                           <View>
                                <Image source={require('../../component/Images/Avatar-base(5).png')}
                                style={{minWidth:63, minHeight:30, flexDirection:'column',justifyContent:'center',alignItems:'center',
@@ -158,6 +159,9 @@ function AlaakHome (){
                                <Text style={{marginLeft:27,
                                color:'#000',fontSize:13}}>Alonso</Text>
                            </View>
+                         </TouchableOpacity>  
+                          
+                           <TouchableOpacity>
                            <View>
                                <Image source={require('../../component/Images/Avatar-base.png')}
                                style={{minWidth:63, minHeight:30, flexDirection:'column',justifyContent:'center',alignItems:'center',}}/> 
@@ -166,6 +170,9 @@ function AlaakHome (){
                                <Text style={{marginLeft:27,
                                color:'#000000',fontSize:13}}>Luna</Text>
                            </View>
+                           </TouchableOpacity>
+                           
+                           <TouchableOpacity>
                            <View>
                                <Image source={require('../../component/Images/Avatar-base(1).png')}
                                style={{minWidth:63, minHeight:30, flexDirection:'column',justifyContent:'center',alignItems:'center',}}/>
@@ -174,7 +181,9 @@ function AlaakHome (){
                                <Text style={{marginLeft:25,
                                color:'#000000',fontSize:13}}>Palacios</Text>
                            </View>
-                           <TouchableOpacity onPress={()=>navigation.navigate("Perfil")}>
+                           </TouchableOpacity>
+                           
+                           <TouchableOpacity>
                            <View>
                                <Image source={require('../../component/Images/Avatar-base(3).png')}
                                style={{minWidth:63, minHeight:30, flexDirection:'column',justifyContent:'center',alignItems:'center',}}/>
