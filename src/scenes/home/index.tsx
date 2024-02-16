@@ -26,18 +26,18 @@ function AlaakHome (){
                justifyContent:'space-between',
                paddingHorizontal:16,
                alignItems:'center'}}>
-                <View style={{position:'relative',width:124,height:90}}>
+                <View style={{position:'relative',width:100,height:85}}>
                     <View style={{
                         top:10,
                         position:'absolute',
                         zIndex:999,
-                        width:130,
-                        height:130,
+                        width:105,
+                        height:105,
                         backgroundColor:'#CDA100',
                         overflow:'hidden',
                         borderRadius:100,
-                        justifyContent:'center',
-                        alignItems:'center',
+                        //justifyContent:'center',
+                        //alignItems:'center',
                         padding:10
                         }}>
                     
@@ -46,7 +46,7 @@ function AlaakHome (){
                     </View>
                 </View> 
 
-                <View style={[t.flexRow, t.g8, t.selfEnd]}>
+                <View style={[t.flexRow, t.g9, t.selfCenter]}>
                     <Text style={{color:'#FFFFFF',
                         //justifyContent:'center',
                         //alignItems:'flex-start',
@@ -72,7 +72,7 @@ function AlaakHome (){
                   </View>
                   
                    <Card>
-                       <View style={{flexDirection:'row', justifyContent:"space-evenly"}}>
+                       <View style={{flexDirection:'row',alignItems:'center', justifyContent:"space-evenly"}}>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Organization")}>
                               
                                <View style={{
@@ -89,7 +89,7 @@ function AlaakHome (){
                                color:'#000000',fontSize:13}}>Organigrama</Text>
                                
                            </TouchableOpacity>
-                           <TouchableOpacity style={{alignItems:"center"}}>
+                           <TouchableOpacity style={{alignItems:'center'}}>
                                <View style={{
                                    marginLeft:15,
                                    width:51,
@@ -102,9 +102,9 @@ function AlaakHome (){
                                    <Ser/>
                                </View>
                                <Text style={{marginLeft:19,
-                               color:'#000000',fontSize:13}}>Pagar </Text>
+                               color:'#000000',fontSize:12}}>Pagar </Text>
                                <Text style={{marginLeft:19,
-                               color:'#000000',fontSize:13}}>Servicios </Text>
+                               color:'#000000',fontSize:12}}>Servicios </Text>
                            </TouchableOpacity>
                            <TouchableOpacity style={{alignItems:"center"}} onPress={()=>navigation.navigate("Perfil")}>
                                <View style={{
