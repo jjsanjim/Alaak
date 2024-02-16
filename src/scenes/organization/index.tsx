@@ -249,7 +249,7 @@ function OrganScene() {
             {chips.map(chip => (
               <View key={chip.id} style={styles.buttonShapeF}>
                 <Text style={styles.textFilF}>{chip.labelKey}</Text>
-                <TouchableOpacity onPress={() => deleteByFilter(chip.id)}>
+                <TouchableOpacity style={{alignSelf: "flex-end", paddingHorizontal: 10}} onPress={() => deleteByFilter(chip.id)}>
                   {/*} ()=>deleteBySplice(item)}>*/}
                   <CloseCircleIcon />
                 </TouchableOpacity>

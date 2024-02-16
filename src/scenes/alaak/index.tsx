@@ -108,3 +108,4 @@ function AlaakScene({route}) {
   );
 }
 export default AlaakScene;
+ 
